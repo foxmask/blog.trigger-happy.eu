@@ -1,11 +1,9 @@
-Django Trigger Happy 0.11.0
-###########################
-
-:date: 2015-08-18 10:43
-:tags: python, django, release
-:category: News
-:slug: django-trigger-happy-0.11.0
-:summary: Django Trigger Happy 0.11.0
+title: Django Trigger Happy 0.11.0
+date: 2015-08-18 10:43
+tags: python, django, release
+category: News
+slug: django-trigger-happy-0.11.0
+summary: Django Trigger Happy 0.11.0
 
 
 Hi,
@@ -27,7 +25,7 @@ In celebration program :
 
     Follow hashtag #chess, for example, and all that will be published on this subject, will eventually be generated in an RSS feed by TriggerHappy. 
 
-    I extend a hello to lonely friends of `yahoo pipes`_ to whom I did that, with a foot call from sam&max ;-)
+    I extend a hello to lonely friends of [yahoo pipes](https://pipes.yahoo.com/pipes/) to whom I did that, with a foot call from sam&max ;-)
 
   * **New service Integration** : **Trello**. "is the free, flexible, and visual way to organize anything with anyone." as it defines itself. You can then add card of things to do to organize your project. This adds a toy to the list of keys ring : Twitter, Evernote, RSS, Readability, Pocket
 
@@ -37,7 +35,7 @@ In celebration program :
 
 * **Technical improvements**
 
-  * No more Python2 anywhere. This force me to find solutions of other lib oauth2 authentication for the services like readability and Evernote. Blessing in disguise ! `requests oauthlib`_ is the solution like anyone can imagine :-)
+  * No more Python2 anywhere. This force me to find solutions of other lib oauth2 authentication for the services like readability and Evernote. Blessing in disguise ! [requests oauthlib](https://requests-oauthlib.readthedocs.org/en/latest/) is the solution like anyone can imagine :-)
 
   * Django 1.8.x (naturally)
 
@@ -49,34 +47,21 @@ In celebration program :
 
 * **Performances**
 
-  * As I'm never satisfied of what I produce, even when I finish a thing I tell myself I can do even better. From this perspective, therefore, I articulated the code based on the "`framework cache`_" of django which permits to use the backend of your choice. Thus, all retrieving of data of all the service, is put in the cache. Then, at the publishing moment, Trigger Happy will pick the data in the cache. Before that, all was synchrone. 
+  * As I'm never satisfied of what I produce, even when I finish a thing I tell myself I can do even better. From this perspective, therefore, I articulated the code based on the "[framework cache](https://docs.djangoproject.com/en/1.8/topics/cache/)" of django which permits to use the backend of your choice. Thus, all retrieving of data of all the service, is put in the cache. Then, at the publishing moment, Trigger Happy will pick the data in the cache. Before that, all was synchrone. 
 
-    `Now`_ `Celery`_ orchestrates this retrieving of data and their publishing
+    [Now](http://foxmask.trigger-happy.eu/post/2015/06/19/supervisor-celery-django-orchestration/) [Celery](http://celery.readthedocs.org) orchestrates this retrieving of data and their publishing
 
 
-* `Documentation`_ 
+* [Documentation](http://trigger-happy.readthedocs.org) 
 
   * Updated everywhere. Do not hesitate a moment to read it
-  * To upgrade from the previoous release `everything is here, a migration that took me time to finalize`_
+  * To upgrade from the previous release [everything is here, a migration that took me time to finalize](http://trigger-happy.readthedocs.org/en/latest/migration.html)
 
-And tommorow ? `some new service`_ are planned, and `some other ideas`_ :) 
+And tommorow ? [some new service](https://github.com/foxmask/django-th/labels/module) are planned, and [some other ideas](https://github.com/foxmask/django-th/issues) :) 
 
-I also took the opportunity to rearrange tickets/labels/milestones on github, an easy way to find what one seeks to facilitate `contributions`_
+I also took the opportunity to rearrange tickets/labels/milestones on github, an easy way to find what one seeks to facilitate [contributions](https://github.com/foxmask/django-th/blob/master/CONTRIBUTING.md)
 
 **Thanks !**
 
-Thank `to some interested`_, `to some curious`_ and finally `to contributors`_ who try to tiptoe ;)
+Thank [to some interested](https://github.com/foxmask/django-th/stargazers), [to some curious](https://github.com/foxmask/django-th/watchers) and finally [to contributors](https://github.com/foxmask/django-th/graphs/contributors) who try to tiptoe ;)
 
-.. _`yahoo pipes`: https://pipes.yahoo.com/pipes/
-.. _`requests oauthlib`: https://requests-oauthlib.readthedocs.org/en/latest/
-.. _Documentation: http://trigger-happy.readthedocs.org
-.. _`framework cache`: https://docs.djangoproject.com/en/1.8/topics/cache/
-.. _Now: http://www.foxmask.bzh/post/2015/06/19/supervisor-celery-django-orchestration/
-.. _Celery: http://celery.readthedocs.org
-.. _`everything is here, a migration that took me time to finalize`: http://trigger-happy.readthedocs.org/en/latest/migration.html
-.. _`some new service`: https://github.com/foxmask/django-th/labels/module
-.. _`some other ideas`: https://github.com/foxmask/django-th/issues
-.. _contributions: https://github.com/foxmask/django-th/blob/master/CONTRIBUTING.md
-.. _`to some interested`: https://github.com/foxmask/django-th/stargazers
-.. _`to some curious`: https://github.com/foxmask/django-th/watchers
-.. _`to contributors`: https://github.com/foxmask/django-th/graphs/contributors

@@ -1,11 +1,9 @@
-Bar is opened
-#############
-
-:date: 2015-08-29 18:00
-:tags: python, django
-:category: News
-:slug: bar-is-opened
-:summary: Bar is opened, at least !
+title: Bar is opened
+date: 2015-08-29 18:00
+tags: python, django
+category: News
+slug: bar-is-opened
+summary: Bar is opened, at least !
 
 
 Hi,

@@ -1,56 +1,53 @@
-Shoot an Arrow with Ansible in the TriggerHappy target
-######################################################
-
-:date: 2015-09-06 16:30
-:tags: python, django
-:category: News
-:slug: shoot-an-arrow-with-ansible-in-the-triggerhappy-target
-:summary: Shoot an Arrow with Ansible in the TriggerHappy target
+title: Shoot an Arrow with Ansible in the TriggerHappy target
+date: 2015-09-06 16:30
+tags: python, django
+category: News
+slug: shoot-an-arrow-with-ansible-in-the-triggerhappy-target
+summary: Shoot an Arrow with Ansible in the TriggerHappy target
 
 Create a module for participating to TriggerHappy is now so simple that I cant imagine to make a new one without this new little module named "Trigger Happy Ansible"
 
-What does it do ?
------------------
+# What does it do ?
+
 
 Well, as anyone can imagine, when you start a django project you enter, 
 
 
-.. code-block:: bash
-
-    python manage.py startproject 
+```shell
+python manage.py startproject 
+```
 
 
 when you start a new app you enter :
 
-.. code-block:: bash
-
-    python manage.py startapp
-
+```shell
+python manage.py startapp
+```
 
 thus you will have a new empty module with a lot a "empty" files.
 
-To speed up the creation of a Trigger Happy module, first I made a simple module `django-th-dummy`_ that provides a module ready to use , but that need to be customized to be used.
+To speed up the creation of a Trigger Happy module, first I made a simple module [django-th-dummy](https://github.com/foxmask/django-th-dummy) that provides a module ready to use , but that need to be customized to be used.
 
 So I went a little far away and now you can just enter 
 
-.. code-block:: bash
-
-    ansible-playbook -i hosts site.yml
+```shell
+ansible-playbook -i hosts site.yml
+```
 
 and that's all !
 
 a new TriggerHappy module is ready to be installed in the middle of all the others ones.
 
-Under the hood, what has been done ?
-------------------------------------
+# Under the hood, what has been done ?
+
 
 You need to install ansible, then setup the site.yml file to change all the variables that fit your needs and once the playbook is played, a new folder will be created with everything needed by TriggerHappy
 
-Here is the `site.yml`_ file.
+Here is the [site.yml](https://github.com/foxmask/django-th-ansible/blob/master/site.yml) file.
 
 The lines to be changed are those ones :
 
-.. code:: yaml
+```yaml
 
   vars:
     # to directory tree and class/module/name purpose
@@ -70,12 +67,13 @@ The lines to be changed are those ones :
     external_api: foobar
     external_api_class: Foobar
     external_api_version: 1.2.3
+```
 
 as you can see, I separated variables by usage domain
 
 And here is the output of the running ansible playbook
 
-.. code-block:: bash
+```shell
 
     ansible-playbook -i hosts site.yml
 
@@ -170,8 +168,4 @@ And here is the output of the running ansible playbook
     -rw-r--r-- 1 foxmask foxmask 1513 août  23 16:28 wz-3-form.html
     -rw-r--r-- 1 foxmask foxmask 1513 août  23 16:28 wz-1-form.html
     -rw-r--r-- 1 foxmask foxmask  382 août  23 16:28 callback.html
-
-
-
-.. _`site.yml`: https://github.com/foxmask/django-th-ansible/blob/master/site.yml
-.. _`django-th-dummy`: https://github.com/foxmask/django-th-dummy
+```
