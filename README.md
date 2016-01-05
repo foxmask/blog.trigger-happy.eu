@@ -10,7 +10,7 @@ virtualenv blog.trigger-happy.eu
 cd $_
 source bin/activated
 git clone https://github.com/foxmask/blog.trigger-happy.eu
-git clone https://github.com/getpelican/pelican-plugins
+git clone --recursive https://github.com/getpelican/pelican-plugins
 mv blog.trigger-happy.eu website
 pip install -r requirements.txt
 ```
