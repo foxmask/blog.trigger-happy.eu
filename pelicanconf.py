@@ -30,7 +30,7 @@ FEED_MAX_ITEMS = 10
 
 # theme bootstrap https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3
 BANNER_SUBTITLE = 'a bridge between your internet services'
-BANNER = '/static/banner.jpg'
+BANNER = '/static/banner.png'
 DISPLAY_TAGS_ON_SIDEBAR = False
 BOOTSTRAP_NAVBAR_INVERSE = True
 

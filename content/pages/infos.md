@@ -25,8 +25,7 @@ Examples :
 All of this is widely inspired by the very great IFTTT service which permits that exchanges.
 
 
-.. image:: http://trigger-happy.eu/static/th_esb.png
-    :alt: Trigger Happy architecture
+![Trigger Happy architecture](https://trigger-happy.eu/static/th_esb.png)
 
 
 ## What services are availables ?
