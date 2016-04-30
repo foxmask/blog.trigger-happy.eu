@@ -22,6 +22,9 @@ In celebration program :
 
     Technically, I made the [python API for wallabag](https://github.com/foxmask/wallabag_api), and so I could make the service integration smoothly ;)
 
+    ![wallabag live](https://blog.trigger-happy.eu/static/wallabag_live.png)
+
+
 * **Notice**
   
   Since I dropped Celery and Python RQ, I face some very anoying performances issues related to ... Evernote... Something like, 1 time on 5, Python went in timeout... To compare the behavior, and try to isolate the source of the problem, I created the same triggers, but instead of creating note to Evernote, creating posts to Pocket. And here, everything go fast, no bottle neck at all, no timeout, all is perfect.
