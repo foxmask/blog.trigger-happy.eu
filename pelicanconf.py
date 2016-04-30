@@ -73,6 +73,8 @@ PAGE_SAVE_AS = 'pages/{slug}/index.html'
 # Blogroll
 LINKS = (('Trigger Happy Website', 'https://trigger-happy.eu'),
          ('Documentation', 'http://trigger-happy.readthedocs.org/'),
+         ('RSS', 'https://blog.trigger-happy.eu/feeds/all.rss.xml'),
+         ('Atom', 'https://blog.trigger-happy.eu/feeds/all.atom.xml'),
          ('Source Code', 'https://github.com/foxmask/django-th'),
          ('Trello board', 'https://trello.com/b/Jf0eTBQR/trigger-happy'),
          ('Compare Trigger Happy', 'https://alternativeto.net/software/trigger-happy/'),
@@ -110,6 +112,9 @@ SITEMAP = {'format': 'xml'}
 
 DISQUS_SITENAME = "blogtriggerhappyeu"
 FEED_DOMAIN = 'https://blog.trigger-happy.eu'
+
+# pour le theme octopress
+#SIDEBAR_IMAGE = '/static/cactus.png'
 #SEARCH_BOX = True
 #DISPLAY_PAGES_ON_MENU = True
 #DISPLAY_CATEGORIES_ON_MENU = True
