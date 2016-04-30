@@ -1,5 +1,5 @@
 title: Django Trigger Happy 0.13.2
-date: 2016-04-30 21:15
+date: 2016-04-30 01:15
 tags: django, wallabag, release
 category: News
 slug: django-trigger-happy-0.13.2
