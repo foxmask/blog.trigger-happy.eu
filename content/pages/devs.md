@@ -14,9 +14,11 @@ the following services could be helpful to start your own module
 
 * [Evernote](https://github.com/foxmask/django-th/tree/master/th_evernote)
 * [GitHub](https://github.com/)
+* [Pushbullet](https://github.com/foxmask/django-th/tree/master/th_pushbullet)
 * [Pocket](https://github.com/foxmask/django-th/tree/master/th_pocket)
 * [RSS](https://github.com/foxmask/django-th/tree/master/th_rss)
 * [Readability](https://github.com/foxmask/django-th/tree/master/th_readability)
+* [Todoist](https://github.com/foxmask/django-th/tree/master/th_todoist)
 * [Trello](https://github.com/foxmask/django-th/tree/master/th_trello)
 * [Twitter](https://github.com/foxmask/django-th/tree/master/th_twitter)
 

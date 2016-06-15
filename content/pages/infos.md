@@ -31,7 +31,7 @@ All of this is widely inspired by the very great IFTTT service which permits tha
 ## What services are availables ?
 
 
-You can make communicate with each other, the internet services [Evernote](https://github.com/foxmask/django-th/tree/master/th_evernote), [GitHub](https://github.com/), [Pocket](https://github.com/foxmask/django-th/tree/master/th_pocket), [RSS](https://github.com/foxmask/django-th/tree/master/th_rss), [Readability](https://github.com/foxmask/django-th/tree/master/th_readability), [Trello](https://github.com/foxmask/django-th/tree/master/th_trello), [Twitter](https://github.com/foxmask/django-th/tree/master/th_twitter), [Pelican](https://github.com/foxmask/django-th/tree/master/th_pelican) and take advantage of all RSS feeds. Except RSS, you will have to own an account on each of this internet services.
+You can make communicate with each other, the internet services [Evernote](https://github.com/foxmask/django-th/tree/master/th_evernote), [GitHub](https://github.com/), [Pocket](https://github.com/foxmask/django-th/tree/master/th_pocket), [PushBullet](https://github.com/foxmask/django-th/tree/master/th_pushbullet), [RSS](https://github.com/foxmask/django-th/tree/master/th_rss), [Readability](https://github.com/foxmask/django-th/tree/master/th_readability), [Todoist](https://github.com/foxmask/django-th/tree/master/th_todoist), [Trello](https://github.com/foxmask/django-th/tree/master/th_trello), [Twitter](https://github.com/foxmask/django-th/tree/master/th_twitter), [Pelican](https://github.com/foxmask/django-th/tree/master/th_pelican) and take advantage of all RSS feeds. Except RSS, you will have to own an account on each of this internet services.
 
 
 ## What If I wish to install "Trigger Happy" on my own ?
