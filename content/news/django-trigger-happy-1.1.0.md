@@ -48,6 +48,23 @@ Contributions :
 
 
 
+Installation and Update :
+=========================
+
+Once you did 
+
+```python
+    pip install -U django_th 
+```
+
+finish by
+
+```python
+python manage.py migrate
+```
+to update the database
+
+
 Get involved :
 ==============
 
