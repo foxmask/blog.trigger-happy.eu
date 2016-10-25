@@ -72,7 +72,7 @@ Feel free to use the project for your own needs on your own hosting provider or 
 
 If you want to see a new service to be included to the project: 2 solutions 
 
-* 1 you have python skill and you then can use : https://github.com/foxmask/django-th-ansible to create a new module or fork the project from https://github.com/foxmask/django-th
+* 1 you have python skill and you then can use : [https://github.com/foxmask/django-th-ansible](https://github.com/foxmask/django-th-ansible) to create a new module or fork the project from [https://github.com/foxmask/django-th](https://github.com/foxmask/django-th)
 * 2 you dont have python skill, the you can put suggestions about the project in comments .
 * 3 you have python skill and dont have time to participate, so go to point 2 ;) (ok it's a third solution:)
 
