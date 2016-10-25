@@ -134,4 +134,4 @@ GITHUB_ACTIVITY_MAX_ENTRIES = 10
 TWITTER_USERNAME = 'triggerhappyeu'
 GITHUB_URL = 'https://github.com/foxmask/django-th'
 
-ARTICLE_PATHS = ['news']
+ARTICLE_PATHS = ['news', 'tuto']
