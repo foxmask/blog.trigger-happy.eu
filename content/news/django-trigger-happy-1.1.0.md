@@ -51,7 +51,7 @@ Contributions :
 Get involved :
 ==============
 
-Feel free to use the project for your own need on your own hosting provider or test it on https://trigger-happy.eu
+Feel free to use the project for your own needs on your own hosting provider or test it on https://trigger-happy.eu
 
 If you want to see a new service to be included to the project: 2 solutions 
 
