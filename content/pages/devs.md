@@ -14,13 +14,15 @@ the following services could be helpful to start your own module
 
 * [Evernote](https://github.com/foxmask/django-th/tree/master/th_evernote)
 * [GitHub](https://github.com/)
+* [Instapush](https://github.com/foxmask/django-th/tree/master/th_instapush)
 * [Pushbullet](https://github.com/foxmask/django-th/tree/master/th_pushbullet)
 * [Pocket](https://github.com/foxmask/django-th/tree/master/th_pocket)
 * [RSS](https://github.com/foxmask/django-th/tree/master/th_rss)
-* [Readability](https://github.com/foxmask/django-th/tree/master/th_readability)
+* [Readability](https://github.com/foxmask/django-th/tree/master/th_readability) the service is now closed, so the support has been dropped too
 * [Todoist](https://github.com/foxmask/django-th/tree/master/th_todoist)
 * [Trello](https://github.com/foxmask/django-th/tree/master/th_trello)
 * [Twitter](https://github.com/foxmask/django-th/tree/master/th_twitter)
+* [Wallabag](https://github.com/foxmask/django-th/tree/master/th_wallabag)
 
 A skelton module intended to be cloned to make your own Trigger Happy module named [django-th-dummy](https://github.com/foxmask/django-th-dummy), permits, with very few new lines of code [to produce his little module home made with Trigger Happy - link in french](https://foxmask.trigger-happy.eu/post/2013/12/09/trigger-happy-comment-pondre-son-propre-module)
 
