@@ -30,5 +30,5 @@ You can also use a projet I made that use [Ansible](https://github.com/foxmask/d
 
 ## Roadmap
 
-You can follow it from [here](https://github.com/foxmask/django-th/issues/milestones)
+You can follow it from [here](https://github.com/foxmask/django-th/milestones)
 

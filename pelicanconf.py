@@ -45,7 +45,7 @@ DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = True
 DISPLAY_FEEDS_ON_MENU = True
 DISPLAY_ARTICLE_INFO_ON_INDEX = True
-DISPLAY_RECENT_POSTS_ON_SIDEBAR = True
+DISPLAY_RECENT_POSTS_ON_SIDEBAR = False
 RECENT_POST_COUNT = 5
 
 TWITTER_CARDS = True
@@ -58,9 +58,9 @@ DIRECT_TEMPLATES = ('index', 'categories', 'tags', 'archives', 'search')
 TIPUE_SEARCH = True
 SEARCH_URL = 'search.html'
 
-#AVATAR = '/static/cactus.png'
+# AVATAR = '/static/cactus.png'
 
-#ABOUT_ME = '<a href="/pages/a-propos">Passionné par les Logiciels Libres</a>'
+# ABOUT_ME = '<a href="/pages/a-propos">Passionné par les Logiciels Libres</a>'
 
 # Standard
 DEFAULT_CATEGORY = 'General'
@@ -72,13 +72,16 @@ PAGE_SAVE_AS = 'pages/{slug}/index.html'
 
 # Blogroll
 LINKS = (('Trigger Happy Website', 'https://trigger-happy.eu'),
+         ('Say thanks', 'https://saythanks.io/to/foxmask'),
          ('Documentation', 'http://trigger-happy.readthedocs.org/'),
          ('RSS', 'https://blog.trigger-happy.eu/feeds/all.rss.xml'),
          ('Atom', 'https://blog.trigger-happy.eu/feeds/all.atom.xml'),
          ('Source Code', 'https://github.com/foxmask/django-th'),
          ('Trello board', 'https://trello.com/b/Jf0eTBQR/trigger-happy'),
          ('Compare Trigger Happy', 'https://alternativeto.net/software/trigger-happy/'),
-         ("Author's Blog Posts", 'https://foxmask.trigger-happy.eu'),)
+         ("Author's Blog Posts", 'https://foxmask.trigger-happy.eu'),
+         ("Stats", 'https://blog.trigger-happy.eu/stats.html'),
+)
 
 FREE_PROJECT = True
 # Social widget
@@ -111,7 +114,6 @@ RELATED_POSTS_MAX = 5
 SITEMAP = {'format': 'xml'}
 
 DISQUS_SITENAME = "blogtriggerhappyeu"
-FEED_DOMAIN = 'https://blog.trigger-happy.eu'
 
 # pour le theme octopress
 #SIDEBAR_IMAGE = '/static/cactus.png'
