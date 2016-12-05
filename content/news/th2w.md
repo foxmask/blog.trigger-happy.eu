@@ -6,7 +6,7 @@ slug: trigger-happy-to-wallabag
 status: Published
 
 
-As you may already know, TriggerHappy is able to propagate data from any source of data to any service that consume that data.
+As you may already know, TriggerHappy is able to propagate data from any source of data to any service that consumes that data.
 
 Since several weeks now, I see a lot of tweets of people asking to the team of wallabag how to feed its wallabag instance,
 and the team replying "we don't do that but external services exist to do the job like TriggerHappy".
