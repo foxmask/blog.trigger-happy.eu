@@ -12,7 +12,7 @@ Since several weeks now, I see a lot of tweets of people asking to the team of w
 and the team replying "we don't do that but external services exist to do the job like TriggerHappy".
 
 
-Example (in French)
+Last recent example (in French)
 
 <blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr"><a href="https://twitter.com/sylv_in">@sylv_in</a> Bonjour. Aujourd&#39;hui ça n&#39;est pas possible avec IFTTT pour nous. Mais vous pouvez utiliser <a href="https://t.co/x4VpdmBBkG">https://t.co/x4VpdmBBkG</a> de <a href="https://twitter.com/foxxmask">@foxxmask</a>.</p>&mdash; wallabag (@wallabagapp) <a href="https://twitter.com/wallabagapp/status/804286336471597056">1 décembre 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
