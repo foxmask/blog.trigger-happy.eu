@@ -137,3 +137,7 @@ TWITTER_USERNAME = 'triggerhappyeu'
 GITHUB_URL = 'https://github.com/foxmask/django-th'
 
 ARTICLE_PATHS = ['news', 'tuto']
+
+
+# MARKDOWN = ['codehilite(css_class=codehilite code)']
+MD_EXTENSIONS = ['codehilite(css_class=codehilite code)']
