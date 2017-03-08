@@ -15,10 +15,12 @@ the following services could be helpful to start your own module
 * [Evernote](https://github.com/foxmask/django-th/tree/master/th_evernote)
 * [GitHub](https://github.com/)
 * [Instapush](https://github.com/foxmask/django-th/tree/master/th_instapush)
+* [Mattermost (same as Slack)](https://github.com/foxmask/django-th/tree/master/th_slack)
 * [Pushbullet](https://github.com/foxmask/django-th/tree/master/th_pushbullet)
 * [Pocket](https://github.com/foxmask/django-th/tree/master/th_pocket)
 * [RSS](https://github.com/foxmask/django-th/tree/master/th_rss)
-* [Readability](https://github.com/foxmask/django-th/tree/master/th_readability) the service is now closed, so the support has been dropped too
+* [Taiga](https://github.com/foxmask/django-th/tree/master/th_taiga)
+* [Slack](https://github.com/foxmask/django-th/tree/master/th_slack)
 * [Todoist](https://github.com/foxmask/django-th/tree/master/th_todoist)
 * [Trello](https://github.com/foxmask/django-th/tree/master/th_trello)
 * [Twitter](https://github.com/foxmask/django-th/tree/master/th_twitter)

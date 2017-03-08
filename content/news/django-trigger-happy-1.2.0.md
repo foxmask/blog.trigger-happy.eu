@@ -1,11 +1,14 @@
 title: Django Trigger Happy 1.2.0
 date: 2016-12-22 16:00
-tags: django, release
+tags: django, release, docker, taiga, mattermost, slack
 category: News
 slug: django-trigger-happy-1.2.0
 summary: Django Trigger Happy 1.2.0 released !
 status: Published
 
+
+
+**edit** 29/12/2016 
 
 This will be a short, very short message, but with a lot of fun [I had (have a look at the 'bameda' in the bottom of the article)](https://foxmask.trigger-happy.eu/post/2016/11/26/trigger-happy-two-weeks-after-strong-storm/).
 
@@ -40,4 +43,43 @@ finish by
 python manage.py migrate
 ```
 to update the database
+
+Docker (edit 29/12/2016) :
+==========================
+
+If you prefer to use docker, then clone the repository of the project
+
+```
+git clone https://github.com/foxmask/django-th
+```
+then
+
+## Build 
+
+```
+docker-compose build
+```
+
+## Run
+
+```
+docker-compose up 
+```
+
+## Database update/create
+
+```
+docker-compose run web  python manage.py migrate --settings=django_th.settings_docker
+docker-compose run web  python manage.py createsuperuser --settings=django_th.settings_docker
+```
+
+
+## Running tasks
+
+2 tasks are usually in the crontab : one to read the data source, one to publish the grabbed data:
+
+```
+docker-compose run web  python manage.py read --settings=django_th.settings_docker
+docker-compose run web  python manage.py publish --settings=django_th.settings_docker
+```
 

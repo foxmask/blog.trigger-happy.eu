@@ -1,7 +1,7 @@
 title: Trigger Happy To Wallabag
 date: 2016-12-05 22:00
 tags: wallabag 
-category: News, Tutorial
+category: News
 slug: trigger-happy-to-wallabag
 status: Published
 
