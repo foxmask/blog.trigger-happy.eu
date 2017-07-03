@@ -9,7 +9,7 @@ SITESUBTITLE = 'a bridge between your internet services'
 SITEURL = 'https://blog.trigger-happy.eu'
 TIMEZONE = 'Europe/Paris'
 
-THEME = '../pelican-themes/pelican-bootstrap3/'
+THEME = '../../pelican/pelican-themes/pelican-bootstrap3/'
 
 
 PATH = 'content'
@@ -99,11 +99,13 @@ EXTRA_PATH_METADATA = {
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-
-PLUGIN_PATHS = ['../pelican-plugins']
+JINJA_ENVIRONMENT = {
+    'extensions': ['jinja2.ext.i18n'],
+}
+PLUGIN_PATHS = ['../../pelican/pelican-plugins']
 PLUGINS = ['sitemap', 'pelican-page-order', 'tag_cloud', 'github_activity', 'related_posts', 'liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.youtube', 'liquid_tags.vimeo', 'liquid_tags.include_code',
-           'neighbors', 'github_activity', 'tipue_search']
+           'neighbors', 'github_activity', 'tipue_search', 'i18n_subsites',]
 
 # related_posts plugin - https://github.com/getpelican/pelican-plugins/tree/master/related_posts
 RELATED_POSTS_MAX = 5
