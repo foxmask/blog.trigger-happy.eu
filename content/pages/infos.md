@@ -4,7 +4,7 @@ page_order: 2
 
 ## What is this ?
 
-As it exists tools to make his blog or website or even his own cloud system, "Trigger Happy" is a [free software](http://en.wikipedia.org/wiki/Free_software) that provides a micro [Enterprise service bus (ESB)](http://en.wikipedia.org/wiki/Enterprise_service_bus)
+"Trigger Happy" is a 🚂 bridge between internet services
 
 
 ## How does it work ?
@@ -31,7 +31,7 @@ All of this is widely inspired by the very great IFTTT service which permits tha
 ## What services are availables ?
 
 
-You can make communicate together, the internet services [Evernote](https://github.com/foxmask/django-th/tree/master/th_evernote), [Instapush](https://github.com/foxmask/django-th/tree/master/th_instapush), [GitHub](https://github.com/), [Pocket](https://github.com/foxmask/django-th/tree/master/th_pocket), [PushBullet](https://github.com/foxmask/django-th/tree/master/th_pushbullet), [RSS](https://github.com/foxmask/django-th/tree/master/th_rss), [Todoist](https://github.com/foxmask/django-th/tree/master/th_todoist), [Trello](https://github.com/foxmask/django-th/tree/master/th_trello), [Twitter](https://github.com/foxmask/django-th/tree/master/th_twitter), [Pelican](https://github.com/foxmask/django-th/tree/master/th_pelican), [Wallabag](https://github.com/foxmask/django-th/tree/master/th_wallabag),Mattermost, [Taiga](https://github.com/foxmask/django-th/tree/master/th_taiga),[Slack](https://github.com/foxmask/django-th/tree/master/th_slack) and take advantage of all RSS feeds. Except RSS, you will have to own an account on each of this internet services.
+You can make communicate together, the internet services [Evernote](https://github.com/foxmask/django-th/tree/master/th_evernote), [Instapush](https://github.com/foxmask/django-th/tree/master/th_instapush), [GitHub](https://github.com/), [Pocket](https://github.com/foxmask/django-th/tree/master/th_pocket), [PushBullet](https://github.com/foxmask/django-th/tree/master/th_pushbullet), [RSS](https://github.com/foxmask/django-th/tree/master/th_rss), [Todoist](https://github.com/foxmask/django-th/tree/master/th_todoist), [Trello](https://github.com/foxmask/django-th/tree/master/th_trello), [Twitter](https://github.com/foxmask/django-th/tree/master/th_twitter), [Pelican](https://github.com/foxmask/django-th/tree/master/th_pelican), [Wallabag](https://github.com/foxmask/django-th/tree/master/th_wallabag),Mattermost, [Taiga](https://github.com/foxmask/django-th/tree/master/th_taiga), [Slack](https://github.com/foxmask/django-th/tree/master/th_slack), [Tumblr](https://github.com/foxmask/django-th/tree/master/th_tumblr) and take advantage of all RSS feeds. Except RSS, you will have to own an account on each of this internet services.
 
 ## What If I wish to install "Trigger Happy" on my own ?
 
