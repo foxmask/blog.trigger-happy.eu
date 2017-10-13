@@ -2,6 +2,10 @@ title: Developpers
 slug: developpers
 page_order: 3
 
+## a Technical Presentation 
+
+[Trigger Happy](https://blog.trigger-happy.eu/pages/TriggerHappy.pdf)
+
 ## How to get involved ?
 
 the source code of the project is available on a [GitHub repository](https://github.com/foxmask/django-th), where you could fork it, make your improvments, create new services (with django module) like Twitter, FourSquare, Reddit etc... to expand the project

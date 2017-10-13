@@ -43,3 +43,7 @@ If you have [Python](http://python.org)/[Django](https://www.djangoproject.com/)
 
 Following setbacks with a service called IFTTT which made unreadable notes (because it did not handle accented characters UTF-8), the decision was made to launch a free alternative.
 
+
+## a Technical Presentation 
+
+[Trigger Happy](https://blog.trigger-happy.eu/pages/TriggerHappy.pdf)
