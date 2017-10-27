@@ -25,18 +25,41 @@ Examples :
 All of this is widely inspired by the very great IFTTT service which permits that exchanges.
 
 
-![Trigger Happy architecture](https://trigger-happy.eu/static/th_esb.png)
+![Trigger Happy architecture](https://raw.githubusercontent.com/foxmask/django-th/master/docs/th_esb.png)
 
 
-## What services are availables ?
+## What services are available ?
 
 
-You can make communicate together, the internet services [Evernote](https://github.com/foxmask/django-th/tree/master/th_evernote), [Instapush](https://github.com/foxmask/django-th/tree/master/th_instapush), [GitHub](https://github.com/), [Pocket](https://github.com/foxmask/django-th/tree/master/th_pocket), [PushBullet](https://github.com/foxmask/django-th/tree/master/th_pushbullet), [RSS](https://github.com/foxmask/django-th/tree/master/th_rss), [Todoist](https://github.com/foxmask/django-th/tree/master/th_todoist), [Trello](https://github.com/foxmask/django-th/tree/master/th_trello), [Twitter](https://github.com/foxmask/django-th/tree/master/th_twitter), [Pelican](https://github.com/foxmask/django-th/tree/master/th_pelican), [Wallabag](https://github.com/foxmask/django-th/tree/master/th_wallabag),Mattermost, [Taiga](https://github.com/foxmask/django-th/tree/master/th_taiga), [Slack](https://github.com/foxmask/django-th/tree/master/th_slack), [Tumblr](https://github.com/foxmask/django-th/tree/master/th_tumblr) and take advantage of all RSS feeds. Except RSS, you will have to own an account on each of this internet services.
+* [Evernote](https://github.com/foxmask/django-th/tree/master/th_evernote),
+* [Instapush](https://github.com/foxmask/django-th/tree/master/th_instapush),
+* [GitHub](https://github.com/ifoxmask/django-th/tree/master/th_github), 
+* [Mastodoon](https://github.com/foxmask/django-th/tree/master/th_mastodon),
+* Mattermost,
+* [Pelican](https://github.com/foxmask/django-th/tree/master/th_pelican),
+* [Pocket](https://github.com/foxmask/django-th/tree/master/th_pocket),
+* [PushBullet](https://github.com/foxmask/django-th/tree/master/th_pushbullet),
+* [Reddit](https://github.com/foxmask/django-th/tree/master/th_reddit),
+* [RSS](https://github.com/foxmask/django-th/tree/master/th_rss),
+* [Slack](https://github.com/foxmask/django-th/tree/master/th_slack), 
+* [Taiga](https://github.com/foxmask/django-th/tree/master/th_taiga), 
+* [Todoist](https://github.com/foxmask/django-th/tree/master/th_todoist),
+* [Trello](https://github.com/foxmask/django-th/tree/master/th_trello),
+* [Tumblr](https://github.com/foxmask/django-th/tree/master/th_tumblr)
+* [Twitter](https://github.com/foxmask/django-th/tree/master/th_twitter),
+* [Wallabag](https://github.com/foxmask/django-th/tree/master/th_wallabag),
 
-## What If I wish to install "Trigger Happy" on my own ?
+
+## Installing his/her own Trigger Happy instance
 
 
-If you have [Python](http://python.org)/[Django](https://www.djangoproject.com/) skills, I invite you to read [the documentation](http://trigger-happy.readthedocs.org/en/latest/index.html) which details all of this
+I invite you to read [the documentation](http://trigger-happy.readthedocs.org/en/latest/index.html) which details all you need. And if by some misfortune, you don't really know how to install it, come on [gitter](https://gitter.im/foxmask/django-th) to reach me (foxmask) and we could talk about that. I could already help someone to install the project, without any knowledge with python/django
+
+
+## Using Trigger Happy without installing it
+
+Just [login in](https://trigger-happy.eu/) to the Trigger Happy website.
+It may happens that some features won't be available. This, to avoid the server to stop working correctly.
 
 ## How is this service born ?
 

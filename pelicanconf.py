@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'FoxMaSk'
 SITENAME = 'Trigger Happy'
-SITESUBTITLE = 'a bridge between your internet services'
+SITESUBTITLE = 'a Steamer bridge between your internet services'
 
 SITEURL = 'https://blog.trigger-happy.eu'
 TIMEZONE = 'Europe/Paris'
@@ -72,12 +72,10 @@ PAGE_SAVE_AS = 'pages/{slug}/index.html'
 
 # Blogroll
 LINKS = (('Trigger Happy Website', 'https://trigger-happy.eu'),
-         ('Say thanks', 'https://saythanks.io/to/foxmask'),
          ('Documentation', 'http://trigger-happy.readthedocs.org/'),
          ('RSS', 'https://blog.trigger-happy.eu/feeds/all.rss.xml'),
          ('Atom', 'https://blog.trigger-happy.eu/feeds/all.atom.xml'),
          ('Source Code', 'https://github.com/foxmask/django-th'),
-         ('Trello board', 'https://trello.com/b/Jf0eTBQR/trigger-happy'),
          ('Compare Trigger Happy', 'https://alternativeto.net/software/trigger-happy/'),
          ("Author's Blog Posts", 'https://foxmask.trigger-happy.eu'),
          ("Stats", 'https://blog.trigger-happy.eu/stats.html'),
@@ -143,3 +141,5 @@ ARTICLE_PATHS = ['news', 'tuto']
 
 # MARKDOWN = ['codehilite(css_class=codehilite code)']
 MD_EXTENSIONS = ['codehilite(css_class=codehilite code)']
+
+SAY_THANKS = 'foxmask'
