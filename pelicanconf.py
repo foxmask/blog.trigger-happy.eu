@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'FoxMaSk'
 SITENAME = 'Trigger Happy'
-SITESUBTITLE = 'a Steamer bridge between your internet services'
+SITESUBTITLE = 'The bus for your internet services'
 
 SITEURL = 'https://blog.trigger-happy.eu'
 TIMEZONE = 'Europe/Paris'
@@ -29,7 +29,7 @@ AUTHOR_FEED_RSS = None
 FEED_MAX_ITEMS = 10
 
 # theme bootstrap https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3
-BANNER_SUBTITLE = 'a bridge between your internet services'
+BANNER_SUBTITLE = 'The bus for your internet services'
 BANNER = '/static/banner.png'
 DISPLAY_TAGS_ON_SIDEBAR = False
 BOOTSTRAP_NAVBAR_INVERSE = True

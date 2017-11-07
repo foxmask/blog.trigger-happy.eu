@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Trigger Happy</title><link href="https://blog.trigger-happy.eu/" rel="alternate"></link><link href="https://blog.trigger-happy.eu/feeds/python.atom.xml" rel="self"></link><id>https://blog.trigger-happy.eu/</id><updated>2015-12-14T08:00:00+01:00</updated><entry><title>Awesome Selfhosted</title><link href="https://blog.trigger-happy.eu/awesome-selfhosted.html" rel="alternate"></link><updated>2015-12-14T08:00:00+01:00</updated><author><name>FoxMaSk</name></author><id>tag:blog.trigger-happy.eu,2015-12-14:awesome-selfhosted.html</id><summary type="html">&lt;p&gt;Today, the project is now part of the "awesome" list of selfhosted projects 
+that you can find &lt;a href="https://github.com/Kickball/awesome-selfhosted"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You will notice that Trigger Happy is all alone in that category with the python language&lt;/p&gt;</summary><category term="python"></category><category term="django"></category></entry><entry><title>Shoot an Arrow with Ansible in the TriggerHappy target</title><link href="https://blog.trigger-happy.eu/shoot-an-arrow-with-ansible-in-the-triggerhappy-target.html" rel="alternate"></link><updated>2015-09-06T16:30:00+02:00</updated><author><name>FoxMaSk</name></author><id>tag:blog.trigger-happy.eu,2015-09-06:shoot-an-arrow-with-ansible-in-the-triggerhappy-target.html</id><summary type="html">&lt;p&gt;Create a module for participating to TriggerHappy is now so simple that I cant imagine to make a new one without this new little module named "Trigger Happy Ansible"&lt;/p&gt;
+&lt;h1&gt;What does it do ?&lt;/h1&gt;
+&lt;p&gt;Well, as anyone can imagine, when you start a django project you enter, &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;python manage.py startproject 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;when you start a new app you enter :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;python manage.py startapp
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;thus you will have a new empty module with a lot a "empty" files.&lt;/p&gt;
+&lt;p&gt;To speed up the creation of a Trigger Happy module, first I made a simple module &lt;a href="https://github.com/foxmask/django-th-dummy"&gt;django-th-dummy&lt;/a&gt; that provides a module ready to use , but that need to be customized to be used.&lt;/p&gt;
+&lt;p&gt;So I went a little far away and now you can just enter &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;ansible-playbook -i hosts site.yml
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and that's all !&lt;/p&gt;
+&lt;p&gt;a new TriggerHappy module is ready to be installed in the middle of all the others ones.&lt;/p&gt;
+&lt;h1&gt;Under the hood, what has been done ?&lt;/h1&gt;
+&lt;p&gt;You need to install ansible, then setup the site.yml file to change all the variables that fit your needs and once the playbook is played, a new folder will be created with everything needed by TriggerHappy&lt;/p&gt;
+&lt;p&gt;Here is the &lt;a href="https://github.com/foxmask/django-th-ansible/blob/master/site.yml"&gt;site.yml&lt;/a&gt; file.&lt;/p&gt;
+&lt;p&gt;The lines to be changed are those ones :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;  &lt;span class="l-Scalar-Plain"&gt;vars&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt;
+    &lt;span class="c1"&gt;# to directory tree and class/module/name purpose&lt;/span&gt;
+    &lt;span class="l-Scalar-Plain"&gt;module_name&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;johndoe&lt;/span&gt;
+    &lt;span class="l-Scalar-Plain"&gt;service_name&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;johndoe&lt;/span&gt;
+    &lt;span class="l-Scalar-Plain"&gt;class_name&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;Johndoe&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# for setup.py purpose&lt;/span&gt;
+    &lt;span class="l-Scalar-Plain"&gt;author&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;John Doe&lt;/span&gt;
+    &lt;span class="l-Scalar-Plain"&gt;author_email&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;john@doe.com&lt;/span&gt;
+    &lt;span class="l-Scalar-Plain"&gt;description&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;this is a module that is fun&lt;/span&gt;
+    &lt;span class="l-Scalar-Plain"&gt;details&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;when fun is higher than anything&lt;/span&gt;
+    &lt;span class="l-Scalar-Plain"&gt;url&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;https://github.com/foxmask/django-th-johndoe&lt;/span&gt;
+    &lt;span class="l-Scalar-Plain"&gt;download_url&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;https://github.com/foxmask/django-th-johndoe/archive/trigger-happy-johndoe-&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# for dependencies purpose&lt;/span&gt;
+    &lt;span class="l-Scalar-Plain"&gt;external_api&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;foobar&lt;/span&gt;
+    &lt;span class="l-Scalar-Plain"&gt;external_api_class&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;Foobar&lt;/span&gt;
+    &lt;span class="l-Scalar-Plain"&gt;external_api_version&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;1.2.3&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;as you can see, I separated variables by usage domain&lt;/p&gt;
+&lt;p&gt;And here is the output of the running ansible playbook&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    ansible-playbook -i hosts site.yml
+
+    PLAY &lt;span class="o"&gt;[&lt;/span&gt;home-sweet-home&lt;span class="o"&gt;]&lt;/span&gt; ******************************************************** 
+
+    GATHERING FACTS *************************************************************** 
+    ok: &lt;span class="o"&gt;[&lt;/span&gt;localhost&lt;span class="o"&gt;]&lt;/span&gt;
+
+    TASK: &lt;span class="o"&gt;[&lt;/span&gt;dummy &lt;span class="p"&gt;|&lt;/span&gt; create folder of the module name&lt;span class="o"&gt;]&lt;/span&gt; ****************************** 
+    changed: &lt;span class="o"&gt;[&lt;/span&gt;localhost&lt;span class="o"&gt;]&lt;/span&gt;
+
+    TASK: &lt;span class="o"&gt;[&lt;/span&gt;dummy &lt;span class="p"&gt;|&lt;/span&gt; create tests folder of the module name&lt;span class="o"&gt;]&lt;/span&gt; ************************ 
+    changed: &lt;span class="o"&gt;[&lt;/span&gt;localhost&lt;span class="o"&gt;]&lt;/span&gt;
+
+    TASK: &lt;span class="o"&gt;[&lt;/span&gt;dummy &lt;span class="p"&gt;|&lt;/span&gt; travis.yml&lt;span class="o"&gt;]&lt;/span&gt; **************************************************** 
+    changed: &lt;span class="o"&gt;[&lt;/span&gt;localhost&lt;span class="o"&gt;]&lt;/span&gt;
+
+    TASK: &lt;span class="o"&gt;[&lt;/span&gt;dummy &lt;span class="p"&gt;|&lt;/span&gt; gitignore&lt;span class="o"&gt;]&lt;/span&gt; ***************************************************** 
+    changed: &lt;span class="o"&gt;[&lt;/span&gt;localhost&lt;span class="o"&gt;]&lt;/span&gt;
+
+    TASK: &lt;span class="o"&gt;[&lt;/span&gt;dummy &lt;span class="p"&gt;|&lt;/span&gt; copy of th_dummy/__init__.py&lt;span class="o"&gt;]&lt;/span&gt; ********************************** 
+    changed: &lt;span class="o"&gt;[&lt;/span&gt;localhost&lt;span class="o"&gt;]&lt;/span&gt;
+
+    TASK: &lt;span class="o"&gt;[&lt;/span&gt;dummy &lt;span class="p"&gt;|&lt;/span&gt; copy of th_dummy/tests/__init__.py&lt;span class="o"&gt;]&lt;/span&gt; **************************** 
+    changed: &lt;span class="o"&gt;[&lt;/span&gt;localhost&lt;span class="o"&gt;]&lt;/span&gt;
+
+    TASK: &lt;span class="o"&gt;[&lt;/span&gt;dummy &lt;span class="p"&gt;|&lt;/span&gt; copy of LICENSE&lt;span class="o"&gt;]&lt;/span&gt; *********************************************** 
+    changed: &lt;span class="o"&gt;[&lt;/span&gt;localhost&lt;span class="o"&gt;]&lt;/span&gt;
+
+    TASK: &lt;span class="o"&gt;[&lt;/span&gt;dummy &lt;span class="p"&gt;|&lt;/span&gt; copy of MANIFEST.in&lt;span class="o"&gt;]&lt;/span&gt; ******************************************* 
+    changed: &lt;span class="o"&gt;[&lt;/span&gt;localhost&lt;span class="o"&gt;]&lt;/span&gt;
+
+    TASK: &lt;span class="o"&gt;[&lt;/span&gt;dummy &lt;span class="p"&gt;|&lt;/span&gt; copy of setup.py&lt;span class="o"&gt;]&lt;/span&gt; ********************************************** 
+    changed: &lt;span class="o"&gt;[&lt;/span&gt;localhost&lt;span class="o"&gt;]&lt;/span&gt;
+
+    TASK: &lt;span class="o"&gt;[&lt;/span&gt;dummy &lt;span class="p"&gt;|&lt;/span&gt; copy of README.rst&lt;span class="o"&gt;]&lt;/span&gt; ******************************************** 
+    changed: &lt;span class="o"&gt;[&lt;/span&gt;localhost&lt;span class="o"&gt;]&lt;/span&gt;
+
+    TASK: &lt;span class="o"&gt;[&lt;/span&gt;dummy &lt;span class="p"&gt;|&lt;/span&gt; copy of requirements.txt&lt;span class="o"&gt;]&lt;/span&gt; ************************************** 
+    changed: &lt;span class="o"&gt;[&lt;/span&gt;localhost&lt;span class="o"&gt;]&lt;/span&gt;
+
+    TASK: &lt;span class="o"&gt;[&lt;/span&gt;dummy &lt;span class="p"&gt;|&lt;/span&gt; copy of my_dummy.py to my_&lt;span class="o"&gt;{{&lt;/span&gt; module_name &lt;span class="o"&gt;}}&lt;/span&gt;.py&lt;span class="o"&gt;]&lt;/span&gt; *************** 
+    changed: &lt;span class="o"&gt;[&lt;/span&gt;localhost&lt;span class="o"&gt;]&lt;/span&gt;
+
+    TASK: &lt;span class="o"&gt;[&lt;/span&gt;dummy &lt;span class="p"&gt;|&lt;/span&gt; copy of model.py&lt;span class="o"&gt;]&lt;/span&gt; ********************************************** 
+    changed: &lt;span class="o"&gt;[&lt;/span&gt;localhost&lt;span class="o"&gt;]&lt;/span&gt;
+
+    TASK: &lt;span class="o"&gt;[&lt;/span&gt;dummy &lt;span class="p"&gt;|&lt;/span&gt; copy of forms.py&lt;span class="o"&gt;]&lt;/span&gt; ********************************************** 
+    changed: &lt;span class="o"&gt;[&lt;/span&gt;localhost&lt;span class="o"&gt;]&lt;/span&gt;
+
+    TASK: &lt;span class="o"&gt;[&lt;/span&gt;dummy &lt;span class="p"&gt;|&lt;/span&gt; copy of test.py&lt;span class="o"&gt;]&lt;/span&gt; *********************************************** 
+    changed: &lt;span class="o"&gt;[&lt;/span&gt;localhost&lt;span class="o"&gt;]&lt;/span&gt;
+
+    TASK: &lt;span class="o"&gt;[&lt;/span&gt;dummy &lt;span class="p"&gt;|&lt;/span&gt; copy of the templates&lt;span class="o"&gt;]&lt;/span&gt; ***************************************** 
+    changed: &lt;span class="o"&gt;[&lt;/span&gt;localhost&lt;span class="o"&gt;]&lt;/span&gt;
+
+    PLAY RECAP ******************************************************************** 
+    localhost                  : &lt;span class="nv"&gt;ok&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;17&lt;/span&gt;   &lt;span class="nv"&gt;changed&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;   &lt;span class="nv"&gt;unreachable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;    &lt;span class="nv"&gt;failed&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;   
+
+    &lt;span class="o"&gt;(&lt;/span&gt;triggerhappy-bootstrap&lt;span class="o"&gt;)&lt;/span&gt;foxmask@zorro:~/Django-VirtualEnv/django-th-ansible&lt;span class="nv"&gt;$ &lt;/span&gt;ls -ltR django-th-johndoe/
+    django-th-johndoe/:
+    total 24
+    drwxr-xr-x &lt;span class="m"&gt;4&lt;/span&gt; foxmask foxmask &lt;span class="m"&gt;4096&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 th_johndoe
+    -rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; foxmask foxmask   &lt;span class="m"&gt;14&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 requirements.txt
+    -rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; foxmask foxmask &lt;span class="m"&gt;1368&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 README.rst
+    -rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; foxmask foxmask &lt;span class="m"&gt;1186&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 setup.py
+    -rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; foxmask foxmask  &lt;span class="m"&gt;194&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 MANIFEST.in
+    -rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; foxmask foxmask &lt;span class="m"&gt;1484&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 LICENSE
+
+    django-th-johndoe/th_johndoe:
+    total 28
+    drwxr-xr-x &lt;span class="m"&gt;2&lt;/span&gt; foxmask foxmask &lt;span class="m"&gt;4096&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 tests
+    -rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; foxmask foxmask  &lt;span class="m"&gt;471&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 forms.py
+    -rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; foxmask foxmask  &lt;span class="m"&gt;614&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 models.py
+    -rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; foxmask foxmask &lt;span class="m"&gt;6424&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 my_johndoe.py
+    -rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; foxmask foxmask   &lt;span class="m"&gt;81&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 __init__.py
+    drwxr-xr-x &lt;span class="m"&gt;3&lt;/span&gt; foxmask foxmask &lt;span class="m"&gt;4096&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 templates
+
+    django-th-johndoe/th_johndoe/tests:
+    total 4
+    -rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; foxmask foxmask &lt;span class="m"&gt;3725&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 test.py
+    -rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; foxmask foxmask    &lt;span class="m"&gt;0&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 __init__.py
+
+    django-th-johndoe/th_johndoe/templates:
+    total 4
+    drwxr-xr-x &lt;span class="m"&gt;2&lt;/span&gt; foxmask foxmask &lt;span class="m"&gt;4096&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 th_johndoe
+
+    django-th-johndoe/th_johndoe/templates/th_johndoe:
+    total 20
+    -rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; foxmask foxmask &lt;span class="m"&gt;1277&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 edit_provider.html
+    -rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; foxmask foxmask &lt;span class="m"&gt;1277&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 edit_consumer.html
+    -rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; foxmask foxmask &lt;span class="m"&gt;1513&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 wz-3-form.html
+    -rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; foxmask foxmask &lt;span class="m"&gt;1513&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 wz-1-form.html
+    -rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; foxmask foxmask  &lt;span class="m"&gt;382&lt;/span&gt; août  &lt;span class="m"&gt;23&lt;/span&gt; 16:28 callback.html
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="python"></category><category term="django"></category></entry><entry><title>Alternatives and New Services</title><link href="https://blog.trigger-happy.eu/alternative-to.html" rel="alternate"></link><updated>2015-09-06T10:30:00+02:00</updated><author><name>FoxMaSk</name></author><id>tag:blog.trigger-happy.eu,2015-09-06:alternative-to.html</id><summary type="html">&lt;h1&gt;Alternativeto.net&lt;/h1&gt;
+&lt;p&gt;You can now find alternatives of &lt;a href="https://alternativeto.net/software/trigger-happy/"&gt;Trigger Happy&lt;/a&gt; on &lt;a href="https://alternativeto.net/"&gt;alternative to&lt;/a&gt; and see with which others projects it can be compared.
+There is lot of interesting project ;-)&lt;/p&gt;
+&lt;h1&gt;New services&lt;/h1&gt;
+&lt;p&gt;New services are supported with Trigger Happy : &lt;a href="https://github.com/"&gt;GitHub&lt;/a&gt; and &lt;a href="https://trello.com"&gt;Trello&lt;/a&gt; "Organize anything, together."&lt;/p&gt;
+&lt;p&gt;A scenario we can now make is to create an issue on a github project, once a card is created in a board of Trello&lt;/p&gt;
+&lt;h1&gt;Contact and future&lt;/h1&gt;
+&lt;p&gt;If you already know the project LibreBoard, an opensource clone of Trello, which is became Wekan, &lt;a href="https://github.com/wekan/wekan/issues/166"&gt;it is planed to make a REST API&lt;/a&gt; to be able to be used like Trello. So TriggerHappy will be ready as soon as they will finished this API.&lt;/p&gt;</summary><category term="python"></category><category term="django"></category></entry><entry><title>Bar is opened</title><link href="https://blog.trigger-happy.eu/bar-is-opened.html" rel="alternate"></link><updated>2015-08-29T18:00:00+02:00</updated><author><name>FoxMaSk</name></author><id>tag:blog.trigger-happy.eu,2015-08-29:bar-is-opened.html</id><summary type="html">&lt;p&gt;Hi,&lt;/p&gt;
+&lt;p&gt;the idea was in my head for a while, and finished to make its path and now I found the time to start this blog.&lt;/p&gt;
+&lt;p&gt;Here I will publish the news about the project, the roadmap, the news modules, the release and so on. All that makes a project living.&lt;/p&gt;
+&lt;p&gt;Stay tune ;)&lt;/p&gt;</summary><category term="python"></category><category term="django"></category></entry><entry><title>Django Trigger Happy 0.11.0</title><link href="https://blog.trigger-happy.eu/django-trigger-happy-0.11.0.html" rel="alternate"></link><updated>2015-08-18T10:43:00+02:00</updated><author><name>FoxMaSk</name></author><id>tag:blog.trigger-happy.eu,2015-08-18:django-trigger-happy-0.11.0.html</id><summary type="html">&lt;p&gt;Hi,
+Here is an English Version of my post I made Yesterday, that I couldnt forget to publish ;)&lt;/p&gt;
+&lt;p&gt;So, Here comes a small update of my little project, micro ESB, allowing to orchestrate data retrieval and publishing, while exploiting your own Internet services (like Twitter to name one). Just to stay the master and crontrol your data without having to give your access permissions to anyone.&lt;/p&gt;
+&lt;p&gt;In celebration program :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;New Functions&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Its now possible to &lt;strong&gt;produce RSS flux&lt;/strong&gt; from the data, retrieved by another service we will installed. &lt;/p&gt;
+&lt;p&gt;.. image:: http://www.foxmask.bzh/wp-content/uploads/2015/08/service_installe.png
+    :alt: Installed Services&lt;/p&gt;
+&lt;p&gt;For example from the Twitter service.
+Typically we do a trigger for publishing on twitter, anything that comes from a site such as the week in chess, follow the news. Now you can do the opposite. &lt;/p&gt;
+&lt;p&gt;Follow hashtag #chess, for example, and all that will be published on this subject, will eventually be generated in an RSS feed by TriggerHappy. &lt;/p&gt;
+&lt;p&gt;I extend a hello to lonely friends of &lt;a href="https://pipes.yahoo.com/pipes/"&gt;yahoo pipes&lt;/a&gt; to whom I did that, with a foot call from sam&amp;amp;max ;-)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;New service Integration&lt;/strong&gt; : &lt;strong&gt;Trello&lt;/strong&gt;. "is the free, flexible, and visual way to organize anything with anyone." as it defines itself. You can then add card of things to do to organize your project. This adds a toy to the list of keys ring : Twitter, Evernote, RSS, Readability, Pocket&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Search engine&lt;/strong&gt; (based on haystack &amp;amp; elasticsearch).It is not luxury when you ended up having a lot of triggers, existential questions arise "well I had yet created a trigger that spoke of recipes Breton cuisine" ;-)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A function "&lt;strong&gt;holidays&lt;/strong&gt;" which disables all the  triggers, to enjoy his vacation for good ! Then, when you will come back from holidays, you disable  the holidays mode which will reactivate the triggers that were enable before.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Technical improvements&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;No more Python2 anywhere. This force me to find solutions of other lib oauth2 authentication for the services like readability and Evernote. Blessing in disguise ! &lt;a href="https://requests-oauthlib.readthedocs.org/en/latest/"&gt;requests oauthlib&lt;/a&gt; is the solution like anyone can imagine :-)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Django 1.8.x (naturally)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reorganisation of services  modules in one application rather than having a repository for each module, I ended up all together in filing trigger-happy. &lt;/p&gt;
+&lt;p&gt;Currently it's convenient for releasing and for unit testing, but my gut tells me that at one time I bite into fingers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Managing a limit on the number of publications to a service. Example : I publish on Twitter more than 30 websites that I follow. At a given moment, the news of each of them come too much, that I publish too quickly on Twitter, this has the side effect, to "flood" the timeline of my friends and followers, who, instead of having a heterogeneous timeline ending by hate me to plublish quicker than que Lucky Luke. Now, "this" is over. We define a limit and when it's reached, we publish the rest later.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Performances&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;As I'm never satisfied of what I produce, even when I finish a thing I tell myself I can do even better. From this perspective, therefore, I articulated the code based on the "&lt;a href="https://docs.djangoproject.com/en/1.8/topics/cache/"&gt;framework cache&lt;/a&gt;" of django which permits to use the backend of your choice. Thus, all retrieving of data of all the service, is put in the cache. Then, at the publishing moment, Trigger Happy will pick the data in the cache. Before that, all was synchrone. &lt;/p&gt;
+&lt;p&gt;&lt;a href="http://foxmask.trigger-happy.eu/post/2015/06/19/supervisor-celery-django-orchestration/"&gt;Now&lt;/a&gt; &lt;a href="http://celery.readthedocs.org"&gt;Celery&lt;/a&gt; orchestrates this retrieving of data and their publishing&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://trigger-happy.readthedocs.org"&gt;Documentation&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Updated everywhere. Do not hesitate a moment to read it&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;To upgrade from the previous release &lt;a href="http://trigger-happy.readthedocs.org/en/latest/migration.html"&gt;everything is here, a migration that took me time to finalize&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And tommorow ? &lt;a href="https://github.com/foxmask/django-th/labels/module"&gt;some new service&lt;/a&gt; are planned, and &lt;a href="https://github.com/foxmask/django-th/issues"&gt;some other ideas&lt;/a&gt; :) &lt;/p&gt;
+&lt;p&gt;I also took the opportunity to rearrange tickets/labels/milestones on github, an easy way to find what one seeks to facilitate &lt;a href="https://github.com/foxmask/django-th/blob/master/CONTRIBUTING.md"&gt;contributions&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Thanks !&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Thank &lt;a href="https://github.com/foxmask/django-th/stargazers"&gt;to some interested&lt;/a&gt;, &lt;a href="https://github.com/foxmask/django-th/watchers"&gt;to some curious&lt;/a&gt; and finally &lt;a href="https://github.com/foxmask/django-th/graphs/contributors"&gt;to contributors&lt;/a&gt; who try to tiptoe ;)&lt;/p&gt;</summary><category term="python"></category><category term="django"></category><category term="release"></category></entry></feed>

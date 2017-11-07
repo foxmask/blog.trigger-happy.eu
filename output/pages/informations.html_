@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Informations</title>
+        <link rel="stylesheet" href="https://blog.trigger-happy.eu/theme/css/main.css" />
+        <link href="https://blog.trigger-happy.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Trigger Happy Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+<a href="https://github.com/foxmask/django-th">
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+</a>
+        <header id="banner" class="body">
+                <h1><a href="https://blog.trigger-happy.eu/">Trigger Happy  <strong>a bridge between your internet services</strong></a></h1>
+                <nav><ul>
+                    <li><a href="https://blog.trigger-happy.eu/pages/contact.html">Contact</a></li>
+                    <li><a href="https://blog.trigger-happy.eu/pages/developpers.html">Developpers</a></li>
+                    <li><a href="https://blog.trigger-happy.eu/pages/introduction.html">Introduction</a></li>
+                    <li class="active"><a href="https://blog.trigger-happy.eu/pages/informations.html">Informations</a></li>
+                    <li><a href="https://blog.trigger-happy.eu/category/news.html">News</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+    <h1 class="entry-title">Informations</h1>
+    
+    <h2>What is this ?</h2>
+<p>As it exists tools to make his blog or website or even his own cloud system, "Trigger Happy" is a <a href="http://en.wikipedia.org/wiki/Free_software">free software</a> that provides a micro <a href="http://en.wikipedia.org/wiki/Enterprise_service_bus">Enterprise service bus (ESB)</a></p>
+<h2>How does it work ?</h2>
+<p>Trigger Happy enters in a new category of tools which permits to manage the connection between internet services, as a bridge between them, and will act from events triggered:</p>
+<ul>
+<li>on the web</li>
+<li>on your own "internet" accounts</li>
+</ul>
+<p>Examples :</p>
+<ul>
+<li>When a news is published on a website, I want it to be stored in my Evernote or Pocket account to be read later, or published it on Twitter, or on my Facebook wall, etc...</li>
+<li>when I add a note to my Evernote account, I want to send it to my Pocket account also</li>
+<li>When a tweet about a specific subject is published, send it to my Pocket/Evernote/Whatever account</li>
+<li>etc…</li>
+</ul>
+<p>All of this is widely inspired by the very great IFTTT service which permits that exchanges.</p>
+<p>.. image:: http://trigger-happy.eu/static/th_esb.png
+    :alt: Trigger Happy architecture</p>
+<h2>What services are availables ?</h2>
+<p>You can make communicate with each other, the internet services <a href="https://github.com/foxmask/django-th/tree/master/th_evernote">Evernote</a>, <a href="https://github.com/">GitHub</a>, <a href="https://github.com/foxmask/django-th/tree/master/th_pocket">Pocket</a>, <a href="https://github.com/foxmask/django-th/tree/master/th_rss">RSS</a>, <a href="https://github.com/foxmask/django-th/tree/master/th_readability">Readability</a>, <a href="https://github.com/foxmask/django-th/tree/master/th_trello">Trello</a>, <a href="https://github.com/foxmask/django-th/tree/master/th_twitter">Twitter</a> and take advantage of all RSS feeds. Except RSS, you will have to own an account on each of this internet services.</p>
+<h2>What If I wish to install "Trigger Happy" on my own ?</h2>
+<p>If you have <a href="http://python.org">Python</a>/<a href="https://www.djangoproject.com/">Django</a> skills, I invite you to read <a href="http://trigger-happy.readthedocs.org/en/latest/index.html">the documentation</a> which details all of this</p>
+<h2>How is this service born ?</h2>
+<p>Following setbacks with a service called IFTTT which made unreadable notes (because it did not handle accented characters UTF-8), the decision was made to launch a free alternative.</p>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="https://trigger-happy.eu">Trigger Happy Website</a></li>
+                            <li><a href="http://trigger-happy.readthedocs.org/">Documentation</a></li>
+                            <li><a href="https://github.com/foxmask/django-th">Source Code</a></li>
+                            <li><a href="https://trello.com/b/Jf0eTBQR/trigger-happy">Trello board</a></li>
+                            <li><a href="https://alternativeto.net/software/trigger-happy/">Compare Trigger Happy</a></li>
+                            <li><a href="https://foxmask.trigger-happy.eu">Author's Blog Posts</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="https://blog.trigger-happy.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="https://twitter.com/triggerhappyeu">@triggerhappyeu</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'blogtriggerhappyeu';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>

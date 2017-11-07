@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Shoot an Arrow with Ansible in the TriggerHappy target - Trigger Happy</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:widgets:csp" content="on">
+
+
+
+<link rel="canonical" href="https://blog.trigger-happy.eu/shoot-an-arrow-with-ansible-in-the-triggerhappy-target.html">
+
+        <meta name="author" content="FoxMaSk" />
+        <meta name="keywords" content="python,django" />
+        <meta name="description" content="Shoot an Arrow with Ansible in the TriggerHappy target" />
+
+        <meta property="og:site_name" content="Trigger Happy" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Shoot an Arrow with Ansible in the TriggerHappy target"/>
+        <meta property="og:url" content="https://blog.trigger-happy.eu/shoot-an-arrow-with-ansible-in-the-triggerhappy-target.html"/>
+        <meta property="og:description" content="Shoot an Arrow with Ansible in the TriggerHappy target"/>
+        <meta property="article:published_time" content="2015-09-06" />
+            <meta property="article:section" content="News" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="django" />
+            <meta property="article:author" content="FoxMaSk" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@triggerhappyeu">
+        <meta name="twitter:creator" content="@triggerhappyeu">
+    <meta name="twitter:domain" content="https://blog.trigger-happy.eu">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://blog.trigger-happy.eu/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="https://blog.trigger-happy.eu/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://blog.trigger-happy.eu/theme/css/pygments/native.css" rel="stylesheet">
+    <link href="https://blog.trigger-happy.eu/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://blog.trigger-happy.eu/theme/css/style.css" type="text/css"/>
+
+        <link href="https://blog.trigger-happy.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Trigger Happy ATOM Feed"/>
+
+        <link href="https://blog.trigger-happy.eu/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+              title="Trigger Happy RSS Feed"/>
+
+
+        <link href="https://blog.trigger-happy.eu/feeds/news.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Trigger Happy News ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://blog.trigger-happy.eu/" class="navbar-brand">
+Trigger Happy            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://blog.trigger-happy.eu/pages/contact">
+                             Contact
+                          </a></li>
+                         <li><a href="https://blog.trigger-happy.eu/pages/developpers">
+                             Developpers
+                          </a></li>
+                         <li><a href="https://blog.trigger-happy.eu/pages/informations">
+                             Informations
+                          </a></li>
+                         <li><a href="https://blog.trigger-happy.eu/pages/introduction">
+                             Introduction
+                          </a></li>
+                        <li class="active">
+                            <a href="https://blog.trigger-happy.eu/category/news.html">News</a>
+                        </li>
+                        <li >
+                            <a href="https://blog.trigger-happy.eu/category/techno.html">Techno</a>
+                        </li>
+                        <li >
+                            <a href="https://blog.trigger-happy.eu/category/tutorial.html">Tutorial</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><span>
+                <form class="navbar-search" action="search.html">
+                  <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
+                </form></span>
+              </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://blog.trigger-happy.eu/shoot-an-arrow-with-ansible-in-the-triggerhappy-target.html"
+                       rel="bookmark"
+                       title="Permalink to Shoot an Arrow with Ansible in the TriggerHappy target">
+                        Shoot an Arrow with Ansible in the TriggerHappy target
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2015-09-06T16:30:00+02:00"> Sun 06 September 2015</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://blog.trigger-happy.eu/tag/python.html">python</a>
+        /
+	<a href="https://blog.trigger-happy.eu/tag/django.html">django</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Create a module for participating to TriggerHappy is now so simple that I cant imagine to make a new one without this new little module named "Trigger Happy Ansible"</p>
+<h1>What does it do ?</h1>
+<p>Well, as anyone can imagine, when you start a django project you enter, </p>
+<div class="highlight"><pre><span></span>python manage.py startproject 
+</pre></div>
+
+
+<p>when you start a new app you enter :</p>
+<div class="highlight"><pre><span></span>python manage.py startapp
+</pre></div>
+
+
+<p>thus you will have a new empty module with a lot a "empty" files.</p>
+<p>To speed up the creation of a Trigger Happy module, first I made a simple module <a href="https://github.com/foxmask/django-th-dummy">django-th-dummy</a> that provides a module ready to use , but that need to be customized to be used.</p>
+<p>So I went a little far away and now you can just enter </p>
+<div class="highlight"><pre><span></span>ansible-playbook -i hosts site.yml
+</pre></div>
+
+
+<p>and that's all !</p>
+<p>a new TriggerHappy module is ready to be installed in the middle of all the others ones.</p>
+<h1>Under the hood, what has been done ?</h1>
+<p>You need to install ansible, then setup the site.yml file to change all the variables that fit your needs and once the playbook is played, a new folder will be created with everything needed by TriggerHappy</p>
+<p>Here is the <a href="https://github.com/foxmask/django-th-ansible/blob/master/site.yml">site.yml</a> file.</p>
+<p>The lines to be changed are those ones :</p>
+<div class="highlight"><pre><span></span>  <span class="l l-Scalar l-Scalar-Plain">vars</span><span class="p p-Indicator">:</span>
+    <span class="c1"># to directory tree and class/module/name purpose</span>
+    <span class="l l-Scalar l-Scalar-Plain">module_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">johndoe</span>
+    <span class="l l-Scalar l-Scalar-Plain">service_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">johndoe</span>
+    <span class="l l-Scalar l-Scalar-Plain">class_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Johndoe</span>
+
+    <span class="c1"># for setup.py purpose</span>
+    <span class="l l-Scalar l-Scalar-Plain">author</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">John Doe</span>
+    <span class="l l-Scalar l-Scalar-Plain">author_email</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">john@doe.com</span>
+    <span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">this is a module that is fun</span>
+    <span class="l l-Scalar l-Scalar-Plain">details</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">when fun is higher than anything</span>
+    <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/foxmask/django-th-johndoe</span>
+    <span class="l l-Scalar l-Scalar-Plain">download_url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/foxmask/django-th-johndoe/archive/trigger-happy-johndoe-</span>
+
+    <span class="c1"># for dependencies purpose</span>
+    <span class="l l-Scalar l-Scalar-Plain">external_api</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">foobar</span>
+    <span class="l l-Scalar l-Scalar-Plain">external_api_class</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Foobar</span>
+    <span class="l l-Scalar l-Scalar-Plain">external_api_version</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1.2.3</span>
+</pre></div>
+
+
+<p>as you can see, I separated variables by usage domain</p>
+<p>And here is the output of the running ansible playbook</p>
+<div class="highlight"><pre><span></span>    ansible-playbook -i hosts site.yml
+
+    PLAY <span class="o">[</span>home-sweet-home<span class="o">]</span> ******************************************************** 
+
+    GATHERING FACTS *************************************************************** 
+    ok: <span class="o">[</span>localhost<span class="o">]</span>
+
+    TASK: <span class="o">[</span>dummy <span class="p">|</span> create folder of the module name<span class="o">]</span> ****************************** 
+    changed: <span class="o">[</span>localhost<span class="o">]</span>
+
+    TASK: <span class="o">[</span>dummy <span class="p">|</span> create tests folder of the module name<span class="o">]</span> ************************ 
+    changed: <span class="o">[</span>localhost<span class="o">]</span>
+
+    TASK: <span class="o">[</span>dummy <span class="p">|</span> travis.yml<span class="o">]</span> **************************************************** 
+    changed: <span class="o">[</span>localhost<span class="o">]</span>
+
+    TASK: <span class="o">[</span>dummy <span class="p">|</span> gitignore<span class="o">]</span> ***************************************************** 
+    changed: <span class="o">[</span>localhost<span class="o">]</span>
+
+    TASK: <span class="o">[</span>dummy <span class="p">|</span> copy of th_dummy/__init__.py<span class="o">]</span> ********************************** 
+    changed: <span class="o">[</span>localhost<span class="o">]</span>
+
+    TASK: <span class="o">[</span>dummy <span class="p">|</span> copy of th_dummy/tests/__init__.py<span class="o">]</span> **************************** 
+    changed: <span class="o">[</span>localhost<span class="o">]</span>
+
+    TASK: <span class="o">[</span>dummy <span class="p">|</span> copy of LICENSE<span class="o">]</span> *********************************************** 
+    changed: <span class="o">[</span>localhost<span class="o">]</span>
+
+    TASK: <span class="o">[</span>dummy <span class="p">|</span> copy of MANIFEST.in<span class="o">]</span> ******************************************* 
+    changed: <span class="o">[</span>localhost<span class="o">]</span>
+
+    TASK: <span class="o">[</span>dummy <span class="p">|</span> copy of setup.py<span class="o">]</span> ********************************************** 
+    changed: <span class="o">[</span>localhost<span class="o">]</span>
+
+    TASK: <span class="o">[</span>dummy <span class="p">|</span> copy of README.rst<span class="o">]</span> ******************************************** 
+    changed: <span class="o">[</span>localhost<span class="o">]</span>
+
+    TASK: <span class="o">[</span>dummy <span class="p">|</span> copy of requirements.txt<span class="o">]</span> ************************************** 
+    changed: <span class="o">[</span>localhost<span class="o">]</span>
+
+    TASK: <span class="o">[</span>dummy <span class="p">|</span> copy of my_dummy.py to my_<span class="o">{{</span> module_name <span class="o">}}</span>.py<span class="o">]</span> *************** 
+    changed: <span class="o">[</span>localhost<span class="o">]</span>
+
+    TASK: <span class="o">[</span>dummy <span class="p">|</span> copy of model.py<span class="o">]</span> ********************************************** 
+    changed: <span class="o">[</span>localhost<span class="o">]</span>
+
+    TASK: <span class="o">[</span>dummy <span class="p">|</span> copy of forms.py<span class="o">]</span> ********************************************** 
+    changed: <span class="o">[</span>localhost<span class="o">]</span>
+
+    TASK: <span class="o">[</span>dummy <span class="p">|</span> copy of test.py<span class="o">]</span> *********************************************** 
+    changed: <span class="o">[</span>localhost<span class="o">]</span>
+
+    TASK: <span class="o">[</span>dummy <span class="p">|</span> copy of the templates<span class="o">]</span> ***************************************** 
+    changed: <span class="o">[</span>localhost<span class="o">]</span>
+
+    PLAY RECAP ******************************************************************** 
+    localhost                  : <span class="nv">ok</span><span class="o">=</span><span class="m">17</span>   <span class="nv">changed</span><span class="o">=</span><span class="m">16</span>   <span class="nv">unreachable</span><span class="o">=</span><span class="m">0</span>    <span class="nv">failed</span><span class="o">=</span><span class="m">0</span>   
+
+    <span class="o">(</span>triggerhappy-bootstrap<span class="o">)</span>foxmask@zorro:~/Django-VirtualEnv/django-th-ansible$ ls -ltR django-th-johndoe/
+    django-th-johndoe/:
+    total <span class="m">24</span>
+    drwxr-xr-x <span class="m">4</span> foxmask foxmask <span class="m">4096</span> août  <span class="m">23</span> <span class="m">16</span>:28 th_johndoe
+    -rw-r--r-- <span class="m">1</span> foxmask foxmask   <span class="m">14</span> août  <span class="m">23</span> <span class="m">16</span>:28 requirements.txt
+    -rw-r--r-- <span class="m">1</span> foxmask foxmask <span class="m">1368</span> août  <span class="m">23</span> <span class="m">16</span>:28 README.rst
+    -rw-r--r-- <span class="m">1</span> foxmask foxmask <span class="m">1186</span> août  <span class="m">23</span> <span class="m">16</span>:28 setup.py
+    -rw-r--r-- <span class="m">1</span> foxmask foxmask  <span class="m">194</span> août  <span class="m">23</span> <span class="m">16</span>:28 MANIFEST.in
+    -rw-r--r-- <span class="m">1</span> foxmask foxmask <span class="m">1484</span> août  <span class="m">23</span> <span class="m">16</span>:28 LICENSE
+
+    django-th-johndoe/th_johndoe:
+    total <span class="m">28</span>
+    drwxr-xr-x <span class="m">2</span> foxmask foxmask <span class="m">4096</span> août  <span class="m">23</span> <span class="m">16</span>:28 tests
+    -rw-r--r-- <span class="m">1</span> foxmask foxmask  <span class="m">471</span> août  <span class="m">23</span> <span class="m">16</span>:28 forms.py
+    -rw-r--r-- <span class="m">1</span> foxmask foxmask  <span class="m">614</span> août  <span class="m">23</span> <span class="m">16</span>:28 models.py
+    -rw-r--r-- <span class="m">1</span> foxmask foxmask <span class="m">6424</span> août  <span class="m">23</span> <span class="m">16</span>:28 my_johndoe.py
+    -rw-r--r-- <span class="m">1</span> foxmask foxmask   <span class="m">81</span> août  <span class="m">23</span> <span class="m">16</span>:28 __init__.py
+    drwxr-xr-x <span class="m">3</span> foxmask foxmask <span class="m">4096</span> août  <span class="m">23</span> <span class="m">16</span>:28 templates
+
+    django-th-johndoe/th_johndoe/tests:
+    total <span class="m">4</span>
+    -rw-r--r-- <span class="m">1</span> foxmask foxmask <span class="m">3725</span> août  <span class="m">23</span> <span class="m">16</span>:28 test.py
+    -rw-r--r-- <span class="m">1</span> foxmask foxmask    <span class="m">0</span> août  <span class="m">23</span> <span class="m">16</span>:28 __init__.py
+
+    django-th-johndoe/th_johndoe/templates:
+    total <span class="m">4</span>
+    drwxr-xr-x <span class="m">2</span> foxmask foxmask <span class="m">4096</span> août  <span class="m">23</span> <span class="m">16</span>:28 th_johndoe
+
+    django-th-johndoe/th_johndoe/templates/th_johndoe:
+    total <span class="m">20</span>
+    -rw-r--r-- <span class="m">1</span> foxmask foxmask <span class="m">1277</span> août  <span class="m">23</span> <span class="m">16</span>:28 edit_provider.html
+    -rw-r--r-- <span class="m">1</span> foxmask foxmask <span class="m">1277</span> août  <span class="m">23</span> <span class="m">16</span>:28 edit_consumer.html
+    -rw-r--r-- <span class="m">1</span> foxmask foxmask <span class="m">1513</span> août  <span class="m">23</span> <span class="m">16</span>:28 wz-3-form.html
+    -rw-r--r-- <span class="m">1</span> foxmask foxmask <span class="m">1513</span> août  <span class="m">23</span> <span class="m">16</span>:28 wz-1-form.html
+    -rw-r--r-- <span class="m">1</span> foxmask foxmask  <span class="m">382</span> août  <span class="m">23</span> <span class="m">16</span>:28 callback.html
+</pre></div>
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="https://blog.trigger-happy.eu/django-trigger-happy-0.12.1.html">Django Trigger Happy 0.12.1</a></li>
+        <li><a href="https://blog.trigger-happy.eu/django-trigger-happy-0.12.0-regression.html">Django Trigger Happy 0.12.0 Regression</a></li>
+        <li><a href="https://blog.trigger-happy.eu/django-trigger-happy-0.12.0.html">Django Trigger Happy 0.12.0</a></li>
+        <li><a href="https://blog.trigger-happy.eu/awesome-selfhosted.html">Awesome Selfhosted</a></li>
+        <li><a href="https://blog.trigger-happy.eu/alternative-to.html">Alternatives and New Services</a></li>
+    </ul>
+</section>
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'blogtriggerhappyeu'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'shoot-an-arrow-with-ansible-in-the-triggerhappy-target';
+                var disqus_url = 'https://blog.trigger-happy.eu/shoot-an-arrow-with-ansible-in-the-triggerhappy-target.html';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Twitter Timeline -->
+<li class="list-group-item">
+  <h4><i class="fa fa-twitter fa-lg"></i><span class="icon-label">Latest Tweets</span></h4>
+  <div id="twitter_timeline">
+    <a class="twitter-timeline" data-width="250" data-height="300" data-dnt="true" data-theme="light" href="https://twitter.com/triggerhappyeu">Tweets by triggerhappyeu</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+</li>
+<!-- End Sidebar/Twitter Timeline -->
+<!-- Sidebar/Say Thanks -->
+<li class="list-group-item">
+  <div id="SAY_THANKS">
+    <a href="https://saythanks.io/to/foxmask"><img alt="Say thanks to foxmask" src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg"style="max-width:100%;"></a>
+  </div>
+</li>
+<!-- End Sidebar/Say Thanks -->
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://trigger-happy.eu" target="_blank">Trigger Happy Website</a>
+    </li>
+    <li class="list-group-item">
+      <a href="http://trigger-happy.readthedocs.org/" target="_blank">Documentation</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://blog.trigger-happy.eu/feeds/all.rss.xml" target="_blank">RSS</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://blog.trigger-happy.eu/feeds/all.atom.xml" target="_blank">Atom</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://github.com/foxmask/django-th" target="_blank">Source Code</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://alternativeto.net/software/trigger-happy/" target="_blank">Compare Trigger Happy</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://foxmask.trigger-happy.eu" target="_blank">Author's Blog Posts</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://blog.trigger-happy.eu/stats.html" target="_blank">Stats</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2017 FoxMaSk
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>Unless otherwise stated, all articles are published under the <a href="http://www.wtfpl.net/about/">WTFPL</a> license.</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://blog.trigger-happy.eu/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://blog.trigger-happy.eu/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://blog.trigger-happy.eu/theme/js/respond.min.js"></script>
+
+    <script src="https://blog.trigger-happy.eu/theme/js/bodypadding.js"></script>
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'blogtriggerhappyeu'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+
+</body>
+</html>

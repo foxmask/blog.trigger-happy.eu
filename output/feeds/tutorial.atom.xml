@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Trigger Happy - Tutorial</title><link href="https://blog.trigger-happy.eu/" rel="alternate"></link><link href="https://blog.trigger-happy.eu/feeds/tutorial.atom.xml" rel="self"></link><id>https://blog.trigger-happy.eu/</id><updated>2016-09-09T21:00:00+02:00</updated><entry><title>Trigger Happy : Setup Instapush service</title><link href="https://blog.trigger-happy.eu/trigger-happy-instapush.html" rel="alternate"></link><published>2016-09-09T21:00:00+02:00</published><updated>2016-09-09T21:00:00+02:00</updated><author><name>FoxMaSk</name></author><id>tag:blog.trigger-happy.eu,2016-09-09:/trigger-happy-instapush.html</id><summary type="html">&lt;p&gt;This article explain how to setup Instapush with Trigger Happy and then never miss a thing with a rain of notifications ;)&lt;/p&gt;</summary><content type="html">&lt;p&gt;To use Instapush on TriggerHappy :&lt;/p&gt;
+&lt;h1&gt;3 steps&lt;/h1&gt;
+&lt;h2&gt;Part 1 Instapush&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="Dashboard" src="https://blog.trigger-happy.eu/static/Instapush_dashboard.png"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;on &lt;a href="http://instapush.im"&gt;instapush.im&lt;/a&gt; create an account &lt;/li&gt;
+&lt;li&gt;from TriggerHappy.eu, &lt;a href="https://trigger-happy.eu/th/service/"&gt;edit your instapush service&lt;/a&gt; and in the "User token" field enter the "User token" you have from your dashboard on the tab "&amp;lt;/&amp;gt; Info"&lt;/li&gt;
+&lt;li&gt;on &lt;a href="http://instapush.im"&gt;instapush.im&lt;/a&gt; dashboard, select the tabs "APPS" , then "+ Add Application" and enter a title for this app    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="The Apps" src="https://blog.trigger-happy.eu/static/Instapush_dashboard_apps.png"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;then on the page of your app select "+Add events" and fill the field like below for example &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="New event" src="https://blog.trigger-happy.eu/static/Instapush_dashboard_app_new_event.png"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;now with this new event, click on tab "Basic Info" and get the App ID and App Secret infos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="Application details" src="https://blog.trigger-happy.eu/static/Instapush_dashboard_app_details.png"&gt;&lt;/p&gt;
+&lt;h2&gt;Part 2 Trigger Happy&lt;/h2&gt;
+&lt;p&gt;once all of that is done, create a trigger :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;select Twitter as Provider&lt;/li&gt;
+&lt;li&gt;fill the field like you want, for example in screen put @foxxmask&lt;/li&gt;
+&lt;li&gt;select instapush as Consumer&lt;/li&gt;
+&lt;li&gt;fill the field with the App ID and App Secret you got earlier, fill the "event name" and "tracker name" you saw in the example earlier in the example "mestweets" and "message"&lt;/li&gt;
+&lt;li&gt;save it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Part 3 Instapush on your smartphone&lt;/h2&gt;
+&lt;p&gt;Get it from the store, then connect your account.&lt;/p&gt;
+&lt;h2&gt;End&lt;/h2&gt;
+&lt;p&gt;and now ... wait my tweet :)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The tweets" src="https://blog.trigger-happy.eu/static/instapush_tweets.png"&gt;&lt;/p&gt;
+&lt;p&gt;And tada&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Notifications" src="https://blog.trigger-happy.eu/static/Instapush_notif.png"&gt;&lt;/p&gt;
+&lt;p&gt;no it's not Twitter notification but Instapush notification&lt;/p&gt;
+&lt;p&gt;Have Fun !&lt;/p&gt;</content><category term="django"></category><category term="instapush"></category></entry></feed>

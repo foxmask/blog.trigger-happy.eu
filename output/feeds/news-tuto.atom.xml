@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Trigger Happy</title><link href="https://blog.trigger-happy.eu/" rel="alternate"></link><link href="https://blog.trigger-happy.eu/feeds/news-tuto.atom.xml" rel="self"></link><id>https://blog.trigger-happy.eu/</id><updated>2016-12-05T22:00:00+01:00</updated><entry><title>Trigger Happy To Wallabag</title><link href="https://blog.trigger-happy.eu/trigger-happy-to-wallabag.html" rel="alternate"></link><updated>2016-12-05T22:00:00+01:00</updated><author><name>FoxMaSk</name></author><id>tag:blog.trigger-happy.eu,2016-12-05:trigger-happy-to-wallabag.html</id><summary type="html">&lt;p&gt;As you may already know, TriggerHappy is able to propagate data from any source of data to any service that consume that data.&lt;/p&gt;
+&lt;p&gt;Since several weeks now, I see a lot of tweets of people asking to the team of wallabag how to feed its wallabag instance,
+and the team replying "we don't do that but external services exist to do the job like TriggerHappy".&lt;/p&gt;
+&lt;p&gt;On my side, I thought of a solution since a lot of time, making a dedicated version of TriggerHappy for Wallabag
+Something very very very light.&lt;/p&gt;
+&lt;p&gt;So this week-end during the night of saturday, I made &lt;a href="https://github.com/foxmask/th2w"&gt;TriggerHappy To Wallabag&lt;/a&gt;.
+I used the same them of Wallabag, thus you will not be lost with the UI (at least I hope:)&lt;/p&gt;
+&lt;p&gt;This project just does 2 things : &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Grabbing data from RSS/Atom Feeds&lt;/li&gt;
+&lt;li&gt;Pushing the data to a Wallabag instance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;As it's a python project, I'm sorry for PHP fan but if you don't enjoy that language, continue the path somewhere else :)
+So, I will detail the way to install from scratch :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;creating a virtualenv&lt;/li&gt;
+&lt;li&gt;cloning the source code&lt;/li&gt;
+&lt;li&gt;settings the database&lt;/li&gt;
+&lt;li&gt;starting the project&lt;/li&gt;
+&lt;li&gt;Recursives jobs&lt;/li&gt;
+&lt;li&gt;Creating a new trigger&lt;/li&gt;
+&lt;li&gt;Running read and publish commands&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Creating a virtualenv&lt;/h1&gt;
+&lt;p&gt;We will say we start from scratch from &lt;code&gt;/home/foxmask/&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;virtualenv --pytyhon&lt;span class="o"&gt;=&lt;/span&gt;/usr/bin/python35 my_th2w
+&lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="nv"&gt;$_&lt;/span&gt;
+&lt;span class="nb"&gt;source &lt;/span&gt;bin/activate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;Cloning the source code&lt;/h1&gt;
+&lt;p&gt;get the sources from the github repository :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git clone https://github.com/foxmask/th2w.git
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;then install the dependencies :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install -r requirements.txt
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;Settings the database&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;migrate&lt;/span&gt;           &lt;span class="c"&gt;# this will create a Sqlite3 database&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;createsuperuser&lt;/span&gt;   &lt;span class="c"&gt;# and reply to the questions&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;for example&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Username&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;leave&lt;/span&gt; &lt;span class="n"&gt;blank&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;use&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;foxmask&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; 
+&lt;span class="n"&gt;Email&lt;/span&gt; &lt;span class="n"&gt;address&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;toto&lt;/span&gt;&lt;span class="nd"&gt;@tata.com&lt;/span&gt;
+&lt;span class="n"&gt;Password&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; 
+&lt;span class="n"&gt;Password&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;again&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; 
+&lt;span class="n"&gt;Superuser&lt;/span&gt; &lt;span class="n"&gt;created&lt;/span&gt; &lt;span class="n"&gt;successfully&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;Settings your Wallabag instance&lt;/h1&gt;
+&lt;p&gt;in the &lt;code&gt;th2w/settings.py&lt;/code&gt; file, set the parameters that fit your needs :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;WALLABAG_SECRET&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;#39;username&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;#39;password&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;#39;client_id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;#39;client_secret&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;#39;host&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="c"&gt;# url without the final / eg http://foo.com not http://foo.com/&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Check that the variable &lt;code&gt;DEBUG&lt;/code&gt; is set to &lt;code&gt;False&lt;/code&gt; at the beginning of this file.&lt;/p&gt;
+&lt;h1&gt;Starting the project&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;runserver&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now you can open your browser and go to http://127.0.0.1:8000/ to start using the application&lt;/p&gt;
+&lt;h1&gt;Recursives jobs&lt;/h1&gt;
+&lt;p&gt;the 2 commands to execute, manually:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;read&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;publish&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;or from the crontab:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;10,25,41,55 * * * * . /home/foxmask/my_th2w/bin/activate &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;cd&lt;/span&gt; /home/foxmask/my_th2w/th2w/ &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; ./manage.py &lt;span class="nb"&gt;read&lt;/span&gt; 
+*/15 * * * * . /home/foxmask/my_th2w/bin/activate &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;cd&lt;/span&gt; /home/foxmask/my_th2w/th2w/ &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; ./manage.py publish
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;Creating a new trigger&lt;/h1&gt;
+&lt;h2&gt;Connection&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="login" src="https://blog.trigger-happy.eu/static/th2w_login.png" /&gt;&lt;/p&gt;
+&lt;h2&gt;Create the trigger&lt;/h2&gt;
+&lt;p&gt;Empty list&lt;/p&gt;
+&lt;p&gt;&lt;img alt="empty list of triggers" src="https://blog.trigger-happy.eu/static/th2w_list.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Creation&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Creation of a trigger" src="https://blog.trigger-happy.eu/static/th2w_create_trigger.png" /&gt;&lt;/p&gt;
+&lt;p&gt;List of triggers&lt;/p&gt;
+&lt;p&gt;&lt;img alt="list of triggers" src="https://blog.trigger-happy.eu/static/th2w_list2.png" /&gt;&lt;/p&gt;
+&lt;h1&gt;Running read and publish commands&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;foxmask@localhost&lt;span class="nv"&gt;$ &lt;/span&gt;./manage.py &lt;span class="nb"&gt;read&lt;/span&gt;
+INFO foxmask - FoxMaSk Blog - &lt;span class="m"&gt;2&lt;/span&gt; new data
+foxmask@localhost&lt;span class="nv"&gt;$ &lt;/span&gt;./manage.py publish
+INFO foxmask - FoxMaSk Blog - &lt;span class="m"&gt;2&lt;/span&gt; new data
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Content before
+&lt;img alt="list of triggers" src="https://blog.trigger-happy.eu/static/wallabag_instance_before.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Content after
+&lt;img alt="list of triggers" src="https://blog.trigger-happy.eu/static/wallabag_instance_after.png" /&gt;&lt;/p&gt;
+&lt;h1&gt;The final word&lt;/h1&gt;
+&lt;p&gt;Now, if the complete project TriggerHappy was too much for your needs, just have fun with this one ;)&lt;/p&gt;</summary><category term="wallabag"></category><category term="trigger-happy"></category></entry></feed>

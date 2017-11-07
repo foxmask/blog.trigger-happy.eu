@@ -1,0 +1,14 @@
+User-agent: msnbot
+User-agent: scrapbot
+User-agent: Baiduspider
+User-agent: MJ12bot
+User-agent: bingbot
+User-agent: YandexBot
+User-agent: Superfeedr
+User-agent: trendictionbot
+User-agent: DotBot
+Disallow: /
+
+User-agent: *
+Disallow: 
+

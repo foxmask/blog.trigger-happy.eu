@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Trigger Happy</title><link>https://blog.trigger-happy.eu/</link><description>a bridge between your internet services</description><atom:link href="https://blog.trigger-happy.eu/feeds/release.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 18 Aug 2015 10:43:00 +0200</lastBuildDate><item><title>Django Trigger Happy 0.11.0</title><link>https://blog.trigger-happy.eu/django-trigger-happy-0.11.0.html</link><description>&lt;p&gt;Hi,
+Here is an English Version of my post I made Yesterday, that I couldnt forget to publish ;)&lt;/p&gt;
+&lt;p&gt;So, Here comes a small update of my little project, micro ESB, allowing to orchestrate data retrieval and publishing, while exploiting your own Internet services (like Twitter to name one). Just to stay the master and crontrol your data without having to give your access permissions to anyone.&lt;/p&gt;
+&lt;p&gt;In celebration program :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;New Functions&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Its now possible to &lt;strong&gt;produce RSS flux&lt;/strong&gt; from the data, retrieved by another service we will installed. &lt;/p&gt;
+&lt;p&gt;.. image:: http://www.foxmask.bzh/wp-content/uploads/2015/08/service_installe.png
+    :alt: Installed Services&lt;/p&gt;
+&lt;p&gt;For example from the Twitter service.
+Typically we do a trigger for publishing on twitter, anything that comes from a site such as the week in chess, follow the news. Now you can do the opposite. &lt;/p&gt;
+&lt;p&gt;Follow hashtag #chess, for example, and all that will be published on this subject, will eventually be generated in an RSS feed by TriggerHappy. &lt;/p&gt;
+&lt;p&gt;I extend a hello to lonely friends of &lt;a href="https://pipes.yahoo.com/pipes/"&gt;yahoo pipes&lt;/a&gt; to whom I did that, with a foot call from sam&amp;amp;max ;-)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;New service Integration&lt;/strong&gt; : &lt;strong&gt;Trello&lt;/strong&gt;. "is the free, flexible, and visual way to organize anything with anyone." as it defines itself. You can then add card of things to do to organize your project. This adds a toy to the list of keys ring : Twitter, Evernote, RSS, Readability, Pocket&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Search engine&lt;/strong&gt; (based on haystack &amp;amp; elasticsearch).It is not luxury when you ended up having a lot of triggers, existential questions arise "well I had yet created a trigger that spoke of recipes Breton cuisine" ;-)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A function "&lt;strong&gt;holidays&lt;/strong&gt;" which disables all the  triggers, to enjoy his vacation for good ! Then, when you will come back from holidays, you disable  the holidays mode which will reactivate the triggers that were enable before.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Technical improvements&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;No more Python2 anywhere. This force me to find solutions of other lib oauth2 authentication for the services like readability and Evernote. Blessing in disguise ! &lt;a href="https://requests-oauthlib.readthedocs.org/en/latest/"&gt;requests oauthlib&lt;/a&gt; is the solution like anyone can imagine :-)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Django 1.8.x (naturally)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reorganisation of services  modules in one application rather than having a repository for each module, I ended up all together in filing trigger-happy. &lt;/p&gt;
+&lt;p&gt;Currently it's convenient for releasing and for unit testing, but my gut tells me that at one time I bite into fingers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Managing a limit on the number of publications to a service. Example : I publish on Twitter more than 30 websites that I follow. At a given moment, the news of each of them come too much, that I publish too quickly on Twitter, this has the side effect, to "flood" the timeline of my friends and followers, who, instead of having a heterogeneous timeline ending by hate me to plublish quicker than que Lucky Luke. Now, "this" is over. We define a limit and when it's reached, we publish the rest later.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Performances&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;As I'm never satisfied of what I produce, even when I finish a thing I tell myself I can do even better. From this perspective, therefore, I articulated the code based on the "&lt;a href="https://docs.djangoproject.com/en/1.8/topics/cache/"&gt;framework cache&lt;/a&gt;" of django which permits to use the backend of your choice. Thus, all retrieving of data of all the service, is put in the cache. Then, at the publishing moment, Trigger Happy will pick the data in the cache. Before that, all was synchrone. &lt;/p&gt;
+&lt;p&gt;&lt;a href="http://foxmask.trigger-happy.eu/post/2015/06/19/supervisor-celery-django-orchestration/"&gt;Now&lt;/a&gt; &lt;a href="http://celery.readthedocs.org"&gt;Celery&lt;/a&gt; orchestrates this retrieving of data and their publishing&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://trigger-happy.readthedocs.org"&gt;Documentation&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Updated everywhere. Do not hesitate a moment to read it&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;To upgrade from the previous release &lt;a href="http://trigger-happy.readthedocs.org/en/latest/migration.html"&gt;everything is here, a migration that took me time to finalize&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And tommorow ? &lt;a href="https://github.com/foxmask/django-th/labels/module"&gt;some new service&lt;/a&gt; are planned, and &lt;a href="https://github.com/foxmask/django-th/issues"&gt;some other ideas&lt;/a&gt; :) &lt;/p&gt;
+&lt;p&gt;I also took the opportunity to rearrange tickets/labels/milestones on github, an easy way to find what one seeks to facilitate &lt;a href="https://github.com/foxmask/django-th/blob/master/CONTRIBUTING.md"&gt;contributions&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Thanks !&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Thank &lt;a href="https://github.com/foxmask/django-th/stargazers"&gt;to some interested&lt;/a&gt;, &lt;a href="https://github.com/foxmask/django-th/watchers"&gt;to some curious&lt;/a&gt; and finally &lt;a href="https://github.com/foxmask/django-th/graphs/contributors"&gt;to contributors&lt;/a&gt; who try to tiptoe ;)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">FoxMaSk</dc:creator><pubDate>Tue, 18 Aug 2015 10:43:00 +0200</pubDate><guid>tag:blog.trigger-happy.eu,2015-08-18:django-trigger-happy-0.11.0.html</guid><category>python</category><category>django</category><category>release</category></item></channel></rss>

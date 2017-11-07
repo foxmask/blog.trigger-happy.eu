@@ -4,7 +4,7 @@ page_order: 2
 
 ## What is this ?
 
-"Trigger Happy" is a 🚂 bridge between internet services
+"Trigger Happy" is the 🚌 for your internet services
 
 
 ## How does it work ?
