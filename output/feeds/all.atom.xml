@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Trigger Happy</title><link href="https://blog.trigger-happy.eu/" rel="alternate"></link><link href="https://blog.trigger-happy.eu/feeds/all.atom.xml" rel="self"></link><id>https://blog.trigger-happy.eu/</id><updated>2017-10-27T16:00:00+02:00</updated><entry><title>Trigger Happy 1.5.0 "Hacktoberfest"</title><link href="https://blog.trigger-happy.eu/django-trigger-happy-1.5.0-hacktoberfest.html" rel="alternate"></link><published>2017-10-27T16:00:00+02:00</published><updated>2017-10-27T16:00:00+02:00</updated><author><name>FoxMaSk</name></author><id>tag:blog.trigger-happy.eu,2017-10-27:/django-trigger-happy-1.5.0-hacktoberfest.html</id><summary type="html">&lt;p&gt;Trigger Happy 1.5.0 aka "Hacktoberfest" has been released !&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Introduction:&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Trigger Happy</title><link href="https://blog.trigger-happy.eu/" rel="alternate"></link><link href="https://blog.trigger-happy.eu/feeds/all.atom.xml" rel="self"></link><id>https://blog.trigger-happy.eu/</id><updated>2017-11-15T22:00:00+01:00</updated><entry><title>Trigger Happy 1.5.1</title><link href="https://blog.trigger-happy.eu/django-trigger-happy-1.5.1.html" rel="alternate"></link><published>2017-11-15T22:00:00+01:00</published><updated>2017-11-15T22:00:00+01:00</updated><author><name>FoxMaSk</name></author><id>tag:blog.trigger-happy.eu,2017-11-15:/django-trigger-happy-1.5.1.html</id><summary type="html">&lt;p&gt;Trigger Happy 1.5.1&lt;/p&gt;</summary><content type="html">&lt;p&gt;A very short release&lt;/p&gt;
+&lt;h1&gt;The release covers minors fixes&lt;/h1&gt;
+&lt;h2&gt;Code:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/foxmask/django-th/commit/10e1569f8a1df84f02c0c7b9d49b05d918126677"&gt;10e1569&lt;/a&gt; - fix an issue with list of services not fully displayed for other user but just for the first one&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/foxmask/django-th/commit/20884ac28ca8f4aad30494bbb05c2c6a596e39f6"&gt;20884ac&lt;/a&gt; - better w/ get_object_or_404 &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/foxmask/django-th/commit/098fadb77517f12e18b60b78bca36cb218260915"&gt;098fadb&lt;/a&gt; - raise 404 when service not found &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/foxmask/django-th/commit/e5ef9329b8718e59c658558887242c429f6b956d"&gt;e5ef932&lt;/a&gt; - login_required to avoid AnonymousUser error &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Doc:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/foxmask/django-th/commit/6a143ada9f1ae139ade9aa8c87996f09bb0d9365"&gt;6a143ad&lt;/a&gt; - doc&lt;/li&gt;
+&lt;/ul&gt;</content><category term="django"></category><category term="release"></category></entry><entry><title>Trigger Happy 1.5.0 "Hacktoberfest"</title><link href="https://blog.trigger-happy.eu/django-trigger-happy-1.5.0-hacktoberfest.html" rel="alternate"></link><published>2017-10-27T16:00:00+02:00</published><updated>2017-10-27T16:00:00+02:00</updated><author><name>FoxMaSk</name></author><id>tag:blog.trigger-happy.eu,2017-10-27:/django-trigger-happy-1.5.0-hacktoberfest.html</id><summary type="html">&lt;p&gt;Trigger Happy 1.5.0 aka "Hacktoberfest" has been released !&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Introduction:&lt;/h1&gt;
 &lt;p&gt;This month, a wonderful event was launched, named &lt;a href="http://hacktoberfest.digitalocean.com/"&gt;Hacktoberfest&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This Hacktoberfest allowed us to win T-Shirt once we did 4 accepted PR. The primary goal was not to win anything (really?:) but, contributing to an open source project, by picked up issues from github, tagged "hacktoberfest".&lt;/p&gt;
 &lt;p&gt;This event was a great moment with a lot of exchanges with a lot of contributors, more than ever before in the story of the project.  &lt;/p&gt;
@@ -492,47 +504,4 @@ INFO foxmask - FoxMaSk Blog - &lt;span class="m"&gt;2&lt;/span&gt; new data
 &lt;p&gt;This version could change the face of the project, with, for instance, Angularjs as front with DRF on top of Trigger-happy to deliver the API access, plus many async* stuff in background. Right now nothing is written in the marble and is still widly open for suggestions you could make.&lt;/p&gt;
 &lt;p&gt;So stay tune, and have fun !&lt;/p&gt;
 &lt;h1&gt;Last thing :&lt;/h1&gt;
-&lt;p&gt;Now, you can 'come in' the service ! How ? On &lt;a href="https://trigger-happy.eu"&gt;Trigger Happy&lt;/a&gt;, click on "come in" in the top of the page and enjoy.&lt;/p&gt;</content><category term="django"></category><category term="release"></category><category term="pushbullet"></category><category term="todoist"></category><category term="instapush"></category></entry><entry><title>Django Trigger Happy 0.13.2</title><link href="https://blog.trigger-happy.eu/django-trigger-happy-0.13.2.html" rel="alternate"></link><published>2016-04-30T01:15:00+02:00</published><updated>2016-04-30T01:15:00+02:00</updated><author><name>FoxMaSk</name></author><id>tag:blog.trigger-happy.eu,2016-04-30:/django-trigger-happy-0.13.2.html</id><summary type="html">&lt;p&gt;Django Trigger Happy 0.13.2 is released ! Happy download !&lt;/p&gt;</summary><content type="html">&lt;p&gt;So, Here comes a small update of this open source clone of IFTTT, allowing to orchestrate data retrieval and publishing, while exploiting our own Internet services (like Twitter to name one). Just to stay the master and control our data without having to give our access permissions to anyone (services provider)&lt;/p&gt;
-&lt;p&gt;In celebration program :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;New service Integration&lt;/strong&gt; &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://www.wallabag.org"&gt;&lt;strong&gt;Wallabag&lt;/strong&gt;&lt;/a&gt;. "a 'read it later' opensource project". Yes you read well : WALLABAG ! &lt;/p&gt;
-&lt;p&gt;Thus now, we are able to store any web page to our own wallabag account, or better to our own wallabag instance (when we can host wallabag on one of our own server ). That way we can stop using Pocket, as wallabag can replace with all the pros you can imagine ;)&lt;/p&gt;
-&lt;p&gt;This adds a toy to the list of keys ring : Twitter, Evernote, RSS, Readability, Pocket, Trello, Pelican. &lt;/p&gt;
-&lt;p&gt;Technically, I made the &lt;a href="https://github.com/foxmask/wallabag_api"&gt;python API for wallabag&lt;/a&gt;, and so I could make the service integration smoothly ;)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="wallabag live" src="https://blog.trigger-happy.eu/static/wallabag_live.png"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Notice&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Since I dropped Celery and Python RQ, I face some very anoying performances issues related to ... Evernote... Something like, 1 time on 5, Python went in timeout... To compare the behavior, and try to isolate the source of the problem, I created the same triggers, but instead of creating note to Evernote, creating posts to Pocket. And here, everything go fast, no bottle neck at all, no timeout, all is perfect.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Installation&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;I invite you to come and read the small &lt;a href="http://trigger-happy.readthedocs.org/en/latest/quickstart.html"&gt;QuickStart guide&lt;/a&gt;, which could be summarize by this commands :&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="n"&gt;pyvenv&lt;/span&gt; &lt;span class="n"&gt;myhomy&lt;/span&gt;
-    &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;myhomy&lt;/span&gt;
-    &lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;django_th&lt;/span&gt;
-    &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;django_th&lt;/span&gt;
-    &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;migrate&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;ul&gt;
-&lt;li&gt;in case you already have installed the project, just do &lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;wallabag_api&lt;/span&gt;
-    &lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;U&lt;/span&gt; &lt;span class="n"&gt;django_th&lt;/span&gt;
-    &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;migrate&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Happy Download, Happy installation :)&lt;/p&gt;</content><category term="django"></category><category term="wallabag"></category><category term="release"></category></entry></feed>
+&lt;p&gt;Now, you can 'come in' the service ! How ? On &lt;a href="https://trigger-happy.eu"&gt;Trigger Happy&lt;/a&gt;, click on "come in" in the top of the page and enjoy.&lt;/p&gt;</content><category term="django"></category><category term="release"></category><category term="pushbullet"></category><category term="todoist"></category><category term="instapush"></category></entry></feed>
